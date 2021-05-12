@@ -19,11 +19,11 @@
     </Setting>
     <Setting>
       <Key>sonar.cs.opencover.reportsPaths</Key>
-      <Value>C:\Fac\SysopSquad\Backend\Tickets\Infrastructure.Tests\coverage.opencover.xml</Value>
+      <Value>C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\coverage.opencover.xml</Value>
     </Setting>
     <Setting>
       <Key>sonar.cs.opencover.it.reportsPaths</Key>
-      <Value>C:\Fac\SysopSquad\Backend\Tickets\Infrastructure.Tests\coverage.opencover.xml</Value>
+      <Value>C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\coverage.opencover.xml</Value>
     </Setting>
   </Settings>
   <Rules>

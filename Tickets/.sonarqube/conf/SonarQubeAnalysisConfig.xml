@@ -100,8 +100,8 @@
     <Property Name="sonar.updatecenter.url">https://update.sonarsource.org/update-center.properties</Property>
     <Property Name="sonar.core.id">BF41A1F2-AXiDmIqtKVadUULnXKgV</Property>
     <Property Name="sonar.core.startTime">5/12/2021 5:22:23 PM</Property>
-    <Property Name="sonar.cs.opencover.reportsPaths">C:\Fac\SysopSquad\Backend\Tickets\Infrastructure.Tests\coverage.opencover.xml</Property>
-    <Property Name="sonar.cs.opencover.it.reportsPaths">C:\Fac\SysopSquad\Backend\Tickets\Infrastructure.Tests\coverage.opencover.xml</Property>
+    <Property Name="sonar.cs.opencover.reportsPaths">C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\coverage.opencover.xml</Property>
+    <Property Name="sonar.cs.opencover.it.reportsPaths">C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\coverage.opencover.xml</Property>
   </ServerSettings>
   <LocalSettings />
   <AnalyzersSettings>

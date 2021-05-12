@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>Persistence</ProjectName>
+  <ProjectName>Tests.Helpers</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
-  <ProjectType>Product</ProjectType>
-  <ProjectGuid>2262081d-71ef-46c6-bd9d-5aac594d8032</ProjectGuid>
-  <FullPath>C:\Fac\SysopSquadTickets\Tickets\Persistence\Persistence.csproj</FullPath>
+  <ProjectType>Test</ProjectType>
+  <ProjectGuid>558c36b2-2b0a-400f-ac39-14abbeefa6d2</ProjectGuid>
+  <FullPath>C:\Fac\SysopSquadTickets\Tickets\Tests.Helpers\Tests.Helpers.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
     <AnalysisResult Id="FilesToAnalyze" Location="C:\Fac\SysopSquadTickets\Tickets\.sonarqube\conf\4\FilesToAnalyze.txt" />
   </AnalysisResults>
   <AnalysisSettings>
-    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Fac\SysopSquadTickets\Tickets\Persistence\bin\Debug\net5.0\Persistence.dll.RoslynCA.json|C:\Fac\SysopSquadTickets\Tickets\Persistence\bin\Debug\net5.0\Persistence.dll.RoslynCA.json</Property>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Fac\SysopSquadTickets\Tickets\Tests.Helpers\bin\Debug\net5.0\Tests.Helpers.dll.RoslynCA.json|C:\Fac\SysopSquadTickets\Tickets\Tests.Helpers\bin\Debug\net5.0\Tests.Helpers.dll.RoslynCA.json</Property>
     <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Fac\SysopSquadTickets\Tickets\.sonarqube\out\4</Property>
   </AnalysisSettings>
   <Configuration>Debug</Configuration>

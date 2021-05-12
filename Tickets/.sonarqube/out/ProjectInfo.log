@@ -10,8 +10,8 @@ Test projects
 ---------------------------------------
 C:\Fac\SysopSquadTickets\Tickets\Presentation.Tests\Presentation.Tests.csproj
 C:\Fac\SysopSquadTickets\Tickets\Tests.Helpers\Tests.Helpers.csproj
-C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\Infrastructure.Tests.csproj
 C:\Fac\SysopSquadTickets\Tickets\Core.Tests\Core.Tests.csproj
+C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\Infrastructure.Tests.csproj
 
 
 Invalid projects

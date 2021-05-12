@@ -2,9 +2,9 @@
 <CoverageSession>
   <Summary numSequencePoints="643" visitedSequencePoints="49" numBranchPoints="42" visitedBranchPoints="1" sequenceCoverage="7.62" branchCoverage="2.38" maxCyclomaticComplexity="61" minCyclomaticComplexity="27" visitedClasses="11" numClasses="71" visitedMethods="23" numMethods="141" />
   <Modules>
-    <Module hash="EB04C522-A68B-4AE2-A058-D3B2CA42C2F8">
+    <Module hash="80549301-0D75-4B40-8C05-1AFB1C7AF7A1">
       <ModulePath>Application.dll</ModulePath>
-      <ModuleTime>2021-05-12T02:38:39</ModuleTime>
+      <ModuleTime>2021-05-12T02:45:47</ModuleTime>
       <ModuleName>Application</ModuleName>
       <Files>
         <File uid="1" fullPath="C:\Fac\SysopSquadTickets\Tickets\Application\DependencyInjection.cs" />
@@ -1013,9 +1013,9 @@
         </Class>
       </Classes>
     </Module>
-    <Module hash="3E5D5485-1EC5-4A76-BCC4-4943EF0AC55B">
+    <Module hash="171538FF-139D-48BB-9712-163FBCF50E0E">
       <ModulePath>Domain.dll</ModulePath>
-      <ModuleTime>2021-05-12T02:38:39</ModuleTime>
+      <ModuleTime>2021-05-12T02:45:47</ModuleTime>
       <ModuleName>Domain</ModuleName>
       <Files>
         <File uid="25" fullPath="C:\Fac\SysopSquadTickets\Tickets\Domain\Entities\Consultant.cs" />
@@ -1340,9 +1340,9 @@
         </Class>
       </Classes>
     </Module>
-    <Module hash="6B2DE7DA-EDC7-4305-BFB7-54E718246909">
+    <Module hash="FDFF8832-8345-4EB2-ADEC-B76E32776BEA">
       <ModulePath>Persistence.dll</ModulePath>
-      <ModuleTime>2021-05-12T02:38:39</ModuleTime>
+      <ModuleTime>2021-05-12T02:45:47</ModuleTime>
       <ModuleName>Persistence</ModuleName>
       <Files>
         <File uid="28" fullPath="C:\Fac\SysopSquadTickets\Tickets\Persistence\DependencyInjection.cs" />
@@ -1574,10 +1574,10 @@
                 <SequencePoint vc="0" uspid="94" ordinal="11" sl="94" sc="1" el="94" ec="2" bec="0" bev="0" fileid="29" />
               </SequencePoints>
               <BranchPoints>
-                <BranchPoint vc="0" uspid="83" ordinal="0" path="0" offset="211" offsetend="213" sl="83" fileid="29" />
-                <BranchPoint vc="0" uspid="83" ordinal="1" path="1" offset="211" offsetend="226" sl="83" fileid="29" />
-                <BranchPoint vc="0" uspid="87" ordinal="2" path="0" offset="287" offsetend="289" sl="87" fileid="29" />
-                <BranchPoint vc="0" uspid="87" ordinal="3" path="1" offset="287" offsetend="329" sl="87" fileid="29" />
+                <BranchPoint vc="0" uspid="83" ordinal="0" path="0" offset="223" offsetend="225" sl="83" fileid="29" />
+                <BranchPoint vc="0" uspid="83" ordinal="1" path="1" offset="223" offsetend="238" sl="83" fileid="29" />
+                <BranchPoint vc="0" uspid="87" ordinal="2" path="0" offset="304" offsetend="306" sl="87" fileid="29" />
+                <BranchPoint vc="0" uspid="87" ordinal="3" path="1" offset="304" offsetend="346" sl="87" fileid="29" />
               </BranchPoints>
               <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="81" ec="1" el="94" bec="0" bev="0" fileid="29" xmlns:p8="xsi" />
             </Method>
@@ -1730,9 +1730,9 @@
         </Class>
       </Classes>
     </Module>
-    <Module hash="20AABD2F-4D24-4FF3-A24A-4CFA2CC0741B">
+    <Module hash="6C0C210A-22E8-41D5-909B-918792863010">
       <ModulePath>WebApi.dll</ModulePath>
-      <ModuleTime>2021-05-12T02:38:39</ModuleTime>
+      <ModuleTime>2021-05-12T02:45:47</ModuleTime>
       <ModuleName>WebApi</ModuleName>
       <Files>
         <File uid="33" fullPath="C:\Fac\SysopSquadTickets\Tickets\WebApi\Program.cs" />
