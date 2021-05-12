@@ -1,0 +1,6 @@
+projectKey=TicketsAPI_Scan_1
+serverUrl=http://localhost:9000
+serverVersion=8.7.1.42226
+dashboardUrl=http://localhost:9000/dashboard?id=TicketsAPI_Scan_1
+ceTaskId=AXlhBZKHedt3TNKgD68-
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXlhBZKHedt3TNKgD68-

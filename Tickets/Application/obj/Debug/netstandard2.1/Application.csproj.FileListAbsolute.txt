@@ -10,3 +10,16 @@ C:\Users\admin\Documents\AN3\SysopSquad\Backend\Tickets\Application\obj\Debug\ne
 C:\Users\admin\Documents\AN3\SysopSquad\Backend\Tickets\Application\obj\Debug\netstandard2.1\Application.csproj.CopyComplete
 C:\Users\admin\Documents\AN3\SysopSquad\Backend\Tickets\Application\obj\Debug\netstandard2.1\Application.dll
 C:\Users\admin\Documents\AN3\SysopSquad\Backend\Tickets\Application\obj\Debug\netstandard2.1\Application.pdb
+C:\Fac\SysopSquadTickets\Tickets\Application\bin\Debug\netstandard2.1\Application.deps.json
+C:\Fac\SysopSquadTickets\Tickets\Application\bin\Debug\netstandard2.1\Application.dll
+C:\Fac\SysopSquadTickets\Tickets\Application\bin\Debug\netstandard2.1\Application.pdb
+C:\Fac\SysopSquadTickets\Tickets\Application\bin\Debug\netstandard2.1\Domain.dll
+C:\Fac\SysopSquadTickets\Tickets\Application\bin\Debug\netstandard2.1\Domain.pdb
+C:\Fac\SysopSquadTickets\Tickets\Application\obj\Debug\netstandard2.1\Application.csproj.AssemblyReference.cache
+C:\Fac\SysopSquadTickets\Tickets\Application\obj\Debug\netstandard2.1\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Fac\SysopSquadTickets\Tickets\Application\obj\Debug\netstandard2.1\Application.AssemblyInfoInputs.cache
+C:\Fac\SysopSquadTickets\Tickets\Application\obj\Debug\netstandard2.1\Application.AssemblyInfo.cs
+C:\Fac\SysopSquadTickets\Tickets\Application\obj\Debug\netstandard2.1\Application.csproj.CoreCompileInputs.cache
+C:\Fac\SysopSquadTickets\Tickets\Application\obj\Debug\netstandard2.1\Application.csproj.CopyComplete
+C:\Fac\SysopSquadTickets\Tickets\Application\obj\Debug\netstandard2.1\Application.dll
+C:\Fac\SysopSquadTickets\Tickets\Application\obj\Debug\netstandard2.1\Application.pdb

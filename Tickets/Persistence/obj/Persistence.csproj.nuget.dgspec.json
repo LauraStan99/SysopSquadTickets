@@ -1,28 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Persistence\\Persistence.csproj": {}
+    "C:\\Fac\\SysopSquadTickets\\Tickets\\Persistence\\Persistence.csproj": {}
   },
   "projects": {
-    "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Application\\Application.csproj": {
+    "C:\\Fac\\SysopSquadTickets\\Tickets\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Fac\\SysopSquadTickets\\Tickets\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Application\\obj\\",
+        "projectPath": "C:\\Fac\\SysopSquadTickets\\Tickets\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
+        "outputPath": "C:\\Fac\\SysopSquadTickets\\Tickets\\Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -35,8 +28,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Domain\\Domain.csproj"
+              "C:\\Fac\\SysopSquadTickets\\Tickets\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Fac\\SysopSquadTickets\\Tickets\\Domain\\Domain.csproj"
               }
             }
           }
@@ -103,29 +96,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.3.21202.5\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Domain\\Domain.csproj": {
+    "C:\\Fac\\SysopSquadTickets\\Tickets\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Fac\\SysopSquadTickets\\Tickets\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Domain\\obj\\",
+        "projectPath": "C:\\Fac\\SysopSquadTickets\\Tickets\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
+        "outputPath": "C:\\Fac\\SysopSquadTickets\\Tickets\\Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -174,29 +160,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.3.21202.5\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Persistence\\Persistence.csproj": {
+    "C:\\Fac\\SysopSquadTickets\\Tickets\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Fac\\SysopSquadTickets\\Tickets\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Persistence\\obj\\",
+        "projectPath": "C:\\Fac\\SysopSquadTickets\\Tickets\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
+        "outputPath": "C:\\Fac\\SysopSquadTickets\\Tickets\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -209,8 +188,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Application\\Application.csproj": {
-                "projectPath": "D:\\TSP.NET\\SysopSquadTickets\\Tickets\\Application\\Application.csproj"
+              "C:\\Fac\\SysopSquadTickets\\Tickets\\Application\\Application.csproj": {
+                "projectPath": "C:\\Fac\\SysopSquadTickets\\Tickets\\Application\\Application.csproj"
               }
             }
           }
@@ -257,7 +236,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.3.21202.5\\RuntimeIdentifierGraph.json"
         }
       }
     }

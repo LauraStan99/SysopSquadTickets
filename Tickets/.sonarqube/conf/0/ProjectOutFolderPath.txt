@@ -1,1 +1,1 @@
-C:\Fac\SysopSquad\Backend\Tickets\.sonarqube\out\0
+C:\Fac\SysopSquadTickets\Tickets\.sonarqube\out\0

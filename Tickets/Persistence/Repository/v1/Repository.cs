@@ -77,20 +77,20 @@ namespace Persistence.Repository.v1
             return foundEntity;
         }
 
-        public async Task<TEntity> UpdateStatusAsync(TEntity ticket)
+        public async Task<TEntity> UpdateStatusAsync(TEntity entity)
         {
-            var entity = await GetByIdAsync(ticket.Id);
-            if (entity == null)
+            var foundEntity = await GetByIdAsync(entity.Id);
+            if (foundEntity == null)
                 return null;
 
-            entity.Status = ticket.Status;
-            if(ticket.Message != null)
+            foundEntity.Status = entity.Status;
+            if(entity.Message != null)
             {
-                entity.Message = ticket.Message;
+                foundEntity.Message = entity.Message;
             }
 
-            await _context.GetCollection<TEntity>().ReplaceOneAsync(filter: t => t.Id == entity.Id, replacement: entity);
-            return entity;
+            await _context.GetCollection<TEntity>().ReplaceOneAsync(filter: t => t.Id == entity.Id, replacement: foundEntity);
+            return foundEntity;
         }
 
         public async Task<bool> DeleteAsync(string id)
