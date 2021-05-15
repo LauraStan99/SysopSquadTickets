@@ -10,6 +10,11 @@ namespace Persistence.Repository.v1
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
     {
+        private enum Status
+        {
+            Open, Solved, Canceled
+        };
+
         private readonly IApplicationDbContext _context;
 
         public Repository(IApplicationDbContext context)
@@ -83,10 +88,15 @@ namespace Persistence.Repository.v1
             if (foundEntity == null)
                 return null;
 
-            foundEntity.Status = entity.Status;
+            if(entity.Status != null)
+            {
+                foundEntity.Status = entity.Status;
+            }
+            
             if(entity.Message != null)
             {
                 foundEntity.Message = entity.Message;
+                foundEntity.Status = Status.Solved.ToString();
             }
 
             await _context.GetCollection<TEntity>().ReplaceOneAsync(filter: t => t.Id == entity.Id, replacement: foundEntity);

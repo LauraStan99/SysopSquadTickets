@@ -11,8 +11,6 @@ namespace Application.Features.TicketFeatures.Commands.UpdateStatusTicketByIdCom
         [Required]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
-
-        [Required]
         public string Status { get; set; }
         public string Message { get; set; }
     }

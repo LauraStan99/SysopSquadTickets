@@ -22,7 +22,6 @@ namespace WebApi.Validators
 
             RuleFor(ticket => ticket.Status)
                     .Cascade(CascadeMode.Stop)
-                    .NotEmpty().WithMessage(ValidationErrors.EmptyStatus)
                     .IsEnumName(typeof(Status), caseSensitive: false).WithMessage(ValidationErrors.InvalidStatus);
         }
     }

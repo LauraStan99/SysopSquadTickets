@@ -22,7 +22,6 @@ namespace Application.Features.TicketFeatures.Commands.UpdateStatusTicketByIdCom
         public async Task<Ticket> Handle(UpdateStatusTicketByIdCommand request, CancellationToken cancellationToken)
         {
             var ticket = _mapper.Map<Ticket>(request);
-
             var updatedTicket = await _repository.UpdateStatusAsync(ticket);
             if (updatedTicket == null)
                 return null;
@@ -32,16 +31,16 @@ namespace Application.Features.TicketFeatures.Commands.UpdateStatusTicketByIdCom
 
             SendEmail _sendEmail = new SendEmail();
 
-            if (request.Status == "Solved")
+            if (request.Message != null)
             {
-                _sendEmail.SendEmailStatusAndMessage(request.Status, user, request.Message);
+                _sendEmail.SendEmailStatusAndMessage(updatedTicket.Status, user, request.Message);
             }
             else
             {
                 _sendEmail.SendEmailStatus(request.Status, user);
             }
 
-            if (request.Status != "Open")
+            if(updatedTicket.Status != "Open")
             {
                 var consultant = _request.GetConsultantById(updatedTicket.ConsultantId);
                 _request.IncreaseNoOfTicketsConsultant(consultant.Id, consultant.NumberOfTickets);
