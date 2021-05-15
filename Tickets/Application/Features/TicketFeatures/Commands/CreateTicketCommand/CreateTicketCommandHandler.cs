@@ -31,7 +31,7 @@ namespace Application.Features.TicketFeatures.Commands.CreateTicketCommand
             ticket.ConsultantId = consultant.Id;
             ticket.Status = "Pending";
 
-            _request.UpdateNoOfTicketsConsultant(consultant.Id, consultant.NumberOfTickets);
+            _request.UpdateNoOfTicketsConsultant(consultant.Id, consultant.NumberOfTickets, consultant.TotalNumberOfTickets);
             SendEmail _sendEmail = new SendEmail();
             _sendEmail.SendEmailStatus(ticket.Status, user);
 

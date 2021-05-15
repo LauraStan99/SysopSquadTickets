@@ -42,9 +42,16 @@ namespace Application.Helpers
             return result;
         }
 
-        public void UpdateNoOfTicketsConsultant(string consultantId, int noOfTickets)
+        public void UpdateNoOfTicketsConsultant(string consultantId, int noOfTickets, int totalNoOfTickets)
         {
-            Consultant consultant = new Consultant { Id = consultantId, NumberOfTickets = noOfTickets - 1 };
+            Consultant consultant = new Consultant { Id = consultantId, NumberOfTickets = noOfTickets - 1, TotalNumberOfTickets = totalNoOfTickets + 1};
+            var response = client.PutAsJsonAsync("api/v1/Consultants", consultant).Result;
+            response.EnsureSuccessStatusCode();
+        }
+
+        public void UpdateSolvedNoOfTicketsConsultant(string consultantId, int solvedNoOfTickets)
+        {
+            Consultant consultant = new Consultant { Id = consultantId, SolvedNumberOfTickets = solvedNoOfTickets + 1 };
             var response = client.PutAsJsonAsync("api/v1/Consultants", consultant).Result;
             response.EnsureSuccessStatusCode();
         }

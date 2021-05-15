@@ -11,5 +11,7 @@
         public int NumberOfTickets { get; set; }
         public string Skill { get; set; }
         public string Availability { get; set; }
+        public int TotalNumberOfTickets { get; set; }
+        public int SolvedNumberOfTickets { get; set; }
     }
 }

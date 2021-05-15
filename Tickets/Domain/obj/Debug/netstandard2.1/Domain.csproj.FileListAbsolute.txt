@@ -10,10 +10,10 @@ C:\Users\admin\Documents\AN3\SysopSquad\Backend\Tickets\Domain\obj\Debug\netstan
 C:\Fac\SysopSquadTickets\Tickets\Domain\bin\Debug\netstandard2.1\Domain.deps.json
 C:\Fac\SysopSquadTickets\Tickets\Domain\bin\Debug\netstandard2.1\Domain.dll
 C:\Fac\SysopSquadTickets\Tickets\Domain\bin\Debug\netstandard2.1\Domain.pdb
-C:\Fac\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.csproj.AssemblyReference.cache
 C:\Fac\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Fac\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.AssemblyInfoInputs.cache
 C:\Fac\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.AssemblyInfo.cs
 C:\Fac\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.csproj.CoreCompileInputs.cache
 C:\Fac\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.dll
 C:\Fac\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.pdb
+C:\Fac\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.csprojAssemblyReference.cache

@@ -30,10 +30,11 @@ namespace Application.Features.TicketFeatures.Commands.UpdateStatusTicketByIdCom
             var user = _request.GetUserById(updatedTicket.UserId);
 
             SendEmail _sendEmail = new SendEmail();
-
+            var consultant = _request.GetConsultantById(updatedTicket.ConsultantId);
             if (request.Message != null)
             {
                 _sendEmail.SendEmailStatusAndMessage(updatedTicket.Status, user, request.Message);
+                _request.UpdateSolvedNoOfTicketsConsultant(consultant.Id, consultant.SolvedNumberOfTickets);
             }
             else
             {
@@ -42,7 +43,6 @@ namespace Application.Features.TicketFeatures.Commands.UpdateStatusTicketByIdCom
 
             if(updatedTicket.Status != "Open")
             {
-                var consultant = _request.GetConsultantById(updatedTicket.ConsultantId);
                 _request.IncreaseNoOfTicketsConsultant(consultant.Id, consultant.NumberOfTickets);
             }
             
