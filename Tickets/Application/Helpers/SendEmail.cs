@@ -23,7 +23,9 @@ namespace Application.Helpers
         }
 
         public void SendEmailStatus(string status, User user)
-        {
+        {   //if status = "Pending"
+            //if status = "Open"
+            //if status = "Canceled"
             var mailMessage = new MailMessage
             {
                 From = new MailAddress(config["Smtp:Username"]),
@@ -32,6 +34,7 @@ namespace Application.Helpers
                 "<p>Your ticket status is now " + status + "</p>",
                 IsBodyHtml = true,
             };
+            
             mailMessage.To.Add(user.Email);
 
             smtpClient.Send(mailMessage);

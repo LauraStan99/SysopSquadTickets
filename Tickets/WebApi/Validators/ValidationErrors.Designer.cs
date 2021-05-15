@@ -133,6 +133,15 @@ namespace WebApi.Validators {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to UserToken should not be empty!.
+        /// </summary>
+        public static string EmptyUserToken {
+            get {
+                return ResourceManager.GetString("EmptyUserToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Category should be Software, Hardware, Hr..
         /// </summary>
         public static string InvalidCategory {

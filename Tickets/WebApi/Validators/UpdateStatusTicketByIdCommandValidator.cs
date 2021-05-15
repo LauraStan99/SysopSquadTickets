@@ -7,7 +7,7 @@ namespace WebApi.Validators
     {
         private enum Status
         {
-            Open, Solved, Canceled
+            Open, Canceled
         };
 
         public UpdateStatusTicketByIdCommandValidator()
@@ -23,6 +23,10 @@ namespace WebApi.Validators
             RuleFor(ticket => ticket.Status)
                     .Cascade(CascadeMode.Stop)
                     .IsEnumName(typeof(Status), caseSensitive: false).WithMessage(ValidationErrors.InvalidStatus);
+
+            RuleFor(ticket => ticket.UserToken)
+                    .Cascade(CascadeMode.Stop)
+                    .NotEmpty().WithMessage(ValidationErrors.EmptyUserToken);
         }
     }
 }

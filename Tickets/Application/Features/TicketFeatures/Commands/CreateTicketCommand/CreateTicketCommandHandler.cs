@@ -24,14 +24,16 @@ namespace Application.Features.TicketFeatures.Commands.CreateTicketCommand
             var ticket = _mapper.Map<Ticket>(request);
 
             HttpRequestAccountsApi _request = new HttpRequestAccountsApi();
-
-            var location = _request.GetUserById(ticket.UserId).Location;
+            var user = _request.GetUserById(ticket.UserId);
+            var location = user.Location;
             var consultant = _request.GetBestConsultant(ticket.Category, location);
 
             ticket.ConsultantId = consultant.Id;
             ticket.Status = "Pending";
 
             _request.UpdateNoOfTicketsConsultant(consultant.Id, consultant.NumberOfTickets);
+            SendEmail _sendEmail = new SendEmail();
+            _sendEmail.SendEmailStatus(ticket.Status, user);
 
             return await _repository.CreateAsync(ticket);
         }

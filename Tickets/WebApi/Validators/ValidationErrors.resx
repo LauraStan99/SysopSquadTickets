@@ -141,6 +141,9 @@
   <data name="EmptyUserId" xml:space="preserve">
     <value>UserId should not be empty!</value>
   </data>
+  <data name="EmptyUserToken" xml:space="preserve">
+    <value>UserToken should not be empty!</value>
+  </data>
   <data name="InvalidCategory" xml:space="preserve">
     <value>Category should be Software, Hardware, Hr.</value>
   </data>
