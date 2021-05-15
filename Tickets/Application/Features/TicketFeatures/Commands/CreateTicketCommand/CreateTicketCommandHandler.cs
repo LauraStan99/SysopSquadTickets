@@ -35,6 +35,11 @@ namespace Application.Features.TicketFeatures.Commands.CreateTicketCommand
             SendEmail _sendEmail = new SendEmail();
             _sendEmail.SendEmailStatus(ticket.Status, user);
 
+            ticket.ConsultantEmail = consultant.Email;
+            ticket.ConsultantName = consultant.Username;
+            ticket.UserEmail = user.Email;
+            ticket.UserName = user.Username;
+
             return await _repository.CreateAsync(ticket);
         }
     }
