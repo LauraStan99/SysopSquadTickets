@@ -44,9 +44,9 @@ namespace WebApi.Validators
                     .NotEmpty().WithMessage(ValidationErrors.EmptyPriority)
                     .IsEnumName(typeof(Priority), caseSensitive: false).WithMessage(ValidationErrors.InvalidPriority);
 
-            RuleFor(ticket => ticket.UserToken)
-                    .Cascade(CascadeMode.Stop)
-                    .NotEmpty().WithMessage(ValidationErrors.EmptyUserToken);
+            //RuleFor(ticket => ticket.UserToken)
+            //        .Cascade(CascadeMode.Stop)
+            //        .NotEmpty().WithMessage(ValidationErrors.EmptyUserToken);
         }
     }
 }
