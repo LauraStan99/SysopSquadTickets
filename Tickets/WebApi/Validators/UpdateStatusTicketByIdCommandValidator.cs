@@ -23,10 +23,6 @@ namespace WebApi.Validators
             RuleFor(ticket => ticket.Status)
                     .Cascade(CascadeMode.Stop)
                     .IsEnumName(typeof(Status), caseSensitive: false).WithMessage(ValidationErrors.InvalidStatus);
-
-            //RuleFor(ticket => ticket.UserToken)
-            //        .Cascade(CascadeMode.Stop)
-            //        .NotEmpty().WithMessage(ValidationErrors.EmptyUserToken);
         }
     }
 }
