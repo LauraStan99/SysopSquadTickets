@@ -103,7 +103,6 @@ C:\Fac\SysopSquadTickets\Tickets\WebApi\bin\Debug\net5.0\Persistence.dll
 C:\Fac\SysopSquadTickets\Tickets\WebApi\bin\Debug\net5.0\Persistence.pdb
 C:\Fac\SysopSquadTickets\Tickets\WebApi\bin\Debug\net5.0\Application.pdb
 C:\Fac\SysopSquadTickets\Tickets\WebApi\bin\Debug\net5.0\Domain.pdb
-C:\Fac\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\WebApi.csproj.AssemblyReference.cache
 C:\Fac\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\WebApi.Validators.ValidationErrors.resources
 C:\Fac\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\WebApi.csproj.GenerateResource.cache
 C:\Fac\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
@@ -120,3 +119,4 @@ C:\Fac\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\WebApi.dll
 C:\Fac\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\ref\WebApi.dll
 C:\Fac\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\WebApi.pdb
 C:\Fac\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\WebApi.genruntimeconfig.cache
+C:\Fac\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\WebApi.csprojAssemblyReference.cache
