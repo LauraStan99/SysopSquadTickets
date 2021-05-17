@@ -4,6 +4,7 @@ using MediatR;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.Helpers;
 
 namespace Application.Features.TicketFeatures.Queries.GetTicketByIdQuery
 {
@@ -21,6 +22,9 @@ namespace Application.Features.TicketFeatures.Queries.GetTicketByIdQuery
             var ticket = await _repository.GetByIdAsync(request.Id);
             if (ticket == null)
                 throw new ArgumentException("Ticket not found!", nameof(request));
+            HttpRequestAccountsApi _request = new HttpRequestAccountsApi();
+            var consultant = _request.GetConsultantById(ticket.ConsultantId);
+            ticket.ConsultantScore = consultant.Score;
             return ticket;
         }
     }
