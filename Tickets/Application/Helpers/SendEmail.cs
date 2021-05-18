@@ -26,7 +26,7 @@ namespace Application.Helpers
         {  
             var mailMessage = new MailMessage();
             mailMessage.From=new MailAddress(config["Smtp:Username"]);
-            mailMessage.Subject = "";
+            mailMessage.Subject = "Ticket status";
 
             if (status == "Pending")
             {
