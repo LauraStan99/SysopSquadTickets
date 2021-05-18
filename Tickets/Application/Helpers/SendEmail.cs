@@ -23,9 +23,7 @@ namespace Application.Helpers
         }
 
         public void SendEmailStatus(string status, User user)
-        {   //if status = "Pending"
-            //if status = "Open"
-            //if status = "Canceled"
+        {  
             var mailMessage = new MailMessage();
             mailMessage.From=new MailAddress(config["Smtp:Username"]);
             mailMessage.Subject = "";
@@ -58,7 +56,7 @@ namespace Application.Helpers
             smtpClient.Send(mailMessage);
         }
 
-        public void SendEmailStatusAndMessage( User user, string message)
+        public void SendEmailStatusAndMessage(string status,User user, string message)
         {
             var mailMessage = new MailMessage
             {
@@ -68,10 +66,9 @@ namespace Application.Helpers
                 "<p>Your problem has been solved successfully!</p>" +
                 "<p>Message from your consultant: </p>" + message +
                 "<p>Thank you for using our services and trust</p>"+
-                "<p>Best regards, Sysop Squad Team! </p>",
-
-            IsBodyHtml = true,
+                "<p>Best regards, Sysop Squad Team! </p>"
             };
+            mailMessage.IsBodyHtml = true;
             mailMessage.To.Add(user.Email);
 
             smtpClient.Send(mailMessage);
