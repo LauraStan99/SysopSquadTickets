@@ -32,8 +32,8 @@ namespace Application.Features.TicketFeatures.Commands.UpdateStatusTicketByIdCom
             SendEmail _sendEmail = new SendEmail();
             var consultant = _request.GetConsultantById(updatedTicket.ConsultantId);
             if (request.Message != null)
-            {
-                _sendEmail.SendEmailStatusAndMessage(updatedTicket.Status, user, request.Message);
+            {   
+                _sendEmail.SendEmailStatusAndMessage(updatedTicket.Status,user, request.Message);
                 _request.UpdateSolvedNoOfTicketsConsultant(consultant.Id, consultant.SolvedNumberOfTickets);
             }
             else
