@@ -26,30 +26,51 @@ namespace Application.Helpers
         {   //if status = "Pending"
             //if status = "Open"
             //if status = "Canceled"
-            var mailMessage = new MailMessage
+            var mailMessage = new MailMessage();
+            mailMessage.From=new MailAddress(config["Smtp:Username"]);
+            mailMessage.Subject = "";
+
+            if (status == "Pending")
             {
-                From = new MailAddress(config["Smtp:Username"]),
-                Subject = "Ticket status",
-                Body = "<h1>Welcome " + user.Username+ "!</h1>"+
-                "<p>Your ticket status is now " + status + "</p>",
-                IsBodyHtml = true,
-            };
-            
+                mailMessage.Body = "<h1>Welcome " + user.Username + "!</h1>" +
+                "<p>Your ticket was created successfully!</p>" +
+                "<p>At this moment it has been taken over by one of our consultants. You will receive more information soon.</p>" +
+                "<p>Best regards, Sysop Squad Team! </p>";
+            }
+            if (status == "Open")
+            {
+                mailMessage.Body = "<h1>Welcome " + user.Username + "!</h1>" +
+                "<p>Your problem has been taken over by one of our consultants!</p>" +
+                "<p>You will receinve more information as soon as possible.</p>" +
+                "<p>Best regards, Sysop Squad Team! </p>";
+            }
+            if (status == "Cancelled")
+            {
+                mailMessage.Body = "<h1>Welcome " + user.Username + "!</h1>" +
+                "<p>Your problem could not be solved by this consultant! We will forward it as soon as possible to find a solution!" +
+                "<p>Thank you for your understanding! </p>" +
+                "<p>Best regards, Sysop Squad Team! </p>";
+            }
+          
+            mailMessage.IsBodyHtml = true;
             mailMessage.To.Add(user.Email);
 
             smtpClient.Send(mailMessage);
         }
 
-        public void SendEmailStatusAndMessage(string status, User user, string message)
+        public void SendEmailStatusAndMessage( User user, string message)
         {
             var mailMessage = new MailMessage
             {
                 From = new MailAddress(config["Smtp:Username"]),
                 Subject = "Ticket status",
                 Body = "<h1>Welcome " + user.Username + "!</h1>" +
-                "<p>Your ticket status is now " + status + "</p>"+
-                "<p>" + message + "</p>",
-                IsBodyHtml = true,
+                "<p>Your problem has been solved successfully!</p>" +
+                "<p>Message from your consultant: </p>" + message +
+                "<p>Thank you for using our services and trust</p>"+
+                "<p>Best regards, Sysop Squad Team! </p>",
+
+            IsBodyHtml = true,
             };
             mailMessage.To.Add(user.Email);
 
