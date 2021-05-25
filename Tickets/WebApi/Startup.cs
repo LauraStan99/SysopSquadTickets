@@ -94,7 +94,7 @@ namespace WebApi
             app.UseCors("MyPolicy");
 
             app.UseAuthentication();
-            app.UseAuthorization();
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

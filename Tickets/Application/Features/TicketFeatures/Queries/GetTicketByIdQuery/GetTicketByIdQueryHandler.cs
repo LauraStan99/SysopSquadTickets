@@ -25,7 +25,7 @@ namespace Application.Features.TicketFeatures.Queries.GetTicketByIdQuery
             if (ticket == null)
                 throw new ArgumentException("Ticket not found!", nameof(request));
                 
-            HttpRequestAccountsApi _request = new HttpRequestAccountsApi(request.UserToken);
+            HttpRequestAccountsApi _request = new HttpRequestAccountsApi();
             var consultant = _request.GetConsultantById(ticket.ConsultantId);
             ticket.ConsultantScore = consultant.Score;
             return ticket;

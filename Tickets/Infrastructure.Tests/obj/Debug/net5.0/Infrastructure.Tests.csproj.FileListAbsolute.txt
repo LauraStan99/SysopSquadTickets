@@ -139,7 +139,6 @@ C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\bin\Debug\net5.0\Persisten
 C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\bin\Debug\net5.0\WebApi.pdb
 C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\bin\Debug\net5.0\Application.pdb
 C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\bin\Debug\net5.0\Domain.pdb
-C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infrastructure.Tests.csproj.AssemblyReference.cache
 C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infrastructure.Tests.GeneratedMSBuildEditorConfig.editorconfig
 C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infrastructure.Tests.AssemblyInfoInputs.cache
 C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infrastructure.Tests.AssemblyInfo.cs
@@ -299,3 +298,4 @@ D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infra
 D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\ref\Infrastructure.Tests.dll
 D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infrastructure.Tests.pdb
 D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infrastructure.Tests.genruntimeconfig.cache
+C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infrastructure.Tests.csprojAssemblyReference.cache
