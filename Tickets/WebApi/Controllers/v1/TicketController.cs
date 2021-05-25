@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System;
 using Application.Features.TicketFeatures.Queries.GetTicketByUserIdAndConsultantIdQuery;
 using Application.Features.TicketFeatures.Commands.UpdateStatusTicketByIdCommand;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApi.Controllers.v1
 {
@@ -30,10 +31,10 @@ namespace WebApi.Controllers.v1
 
         [HttpGet("{id:length(24)}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [AllowAnonymous]
         public async Task<IActionResult> GetById(string id)
         {
-            try
-            {
+            try { 
                 return Ok(await Mediator.Send(new GetTicketByIdQuery(id)));
             }
             catch (Exception ex)
