@@ -23,10 +23,12 @@ namespace Application.Helpers
         }
 
         public void SendEmailStatus(string status, User user)
-        {  
-            var mailMessage = new MailMessage();
-            mailMessage.From=new MailAddress(config["Smtp:Username"]);
-            mailMessage.Subject = "Ticket status";
+        {
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress(config["Smtp:Username"]),
+                Subject = "Ticket status"
+            };
 
             if (status == "Pending")
             {

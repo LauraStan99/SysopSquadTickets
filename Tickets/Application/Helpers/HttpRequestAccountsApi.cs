@@ -15,13 +15,15 @@ namespace Application.Helpers
         private readonly HttpClient client;
         public HttpRequestAccountsApi(string token)
         {
-            client = new HttpClient() 
+            client = new HttpClient()
             {
-                BaseAddress = new Uri(AppSettings.BaseAddress);
-                DefaultRequestHeaders.Add("User-Agent", "Anything");
-                DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-                DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            }
+                BaseAddress = new Uri(AppSettings.BaseAddress),
+            };
+            client.DefaultRequestHeaders.Add("User-Agent", "Anything");
+            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+
         }
  
         public User GetUserById(string userId)
