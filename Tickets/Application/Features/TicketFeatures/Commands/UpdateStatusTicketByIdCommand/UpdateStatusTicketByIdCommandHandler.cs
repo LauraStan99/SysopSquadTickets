@@ -1,4 +1,6 @@
-﻿using Application.Helpers;
+﻿using System.Net;
+using System.Net.Cache;
+using Application.Helpers;
 using Application.Interfaces;
 using AutoMapper;
 using Domain.Entities;
@@ -26,7 +28,7 @@ namespace Application.Features.TicketFeatures.Commands.UpdateStatusTicketByIdCom
             if (updatedTicket == null)
                 return null;
 
-            HttpRequestAccountsApi _request = new HttpRequestAccountsApi();
+            HttpRequestAccountsApi _request = new HttpRequestAccountsApi(request.UserToken);
             var user = _request.GetUserById(updatedTicket.UserId);
 
             SendEmail _sendEmail = new SendEmail();

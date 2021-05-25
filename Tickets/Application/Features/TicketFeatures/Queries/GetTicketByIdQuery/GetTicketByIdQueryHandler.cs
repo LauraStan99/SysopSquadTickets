@@ -1,3 +1,4 @@
+using System.Net.Cache;
 using Application.Interfaces;
 using Domain.Entities;
 using MediatR;
@@ -22,7 +23,7 @@ namespace Application.Features.TicketFeatures.Queries.GetTicketByIdQuery
             var ticket = await _repository.GetByIdAsync(request.Id);
             if (ticket == null)
                 throw new ArgumentException("Ticket not found!", nameof(request));
-            HttpRequestAccountsApi _request = new HttpRequestAccountsApi();
+            HttpRequestAccountsApi _request = new HttpRequestAccountsApi(request.UserToken);
             var consultant = _request.GetConsultantById(ticket.ConsultantId);
             ticket.ConsultantScore = consultant.Score;
             return ticket;

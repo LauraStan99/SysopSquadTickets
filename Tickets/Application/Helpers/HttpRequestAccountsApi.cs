@@ -1,23 +1,30 @@
-﻿using Domain.Entities;
+﻿using System.Net.Sockets;
+using System.Net.Security;
+using System.Security.Claims;
+using System.Net.WebSockets;
+using Domain.Entities;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Security.Authentication;
 
 namespace Application.Helpers
 {
     public class HttpRequestAccountsApi
     {
         private readonly HttpClient client;
-        public HttpRequestAccountsApi()
+        public HttpRequestAccountsApi(string token)
         {
-            client = new HttpClient
-            {
-                BaseAddress = new Uri(AppSettings.BaseAddress)
-            };
+            // var handler = new HttpClientHandler();
+            // handler.SslProtocols = SslProtocols.Tls12;
+            client = new HttpClient();
+            client.BaseAddress = new Uri(AppSettings.BaseAddress);
             client.DefaultRequestHeaders.Add("User-Agent", "Anything");
+            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            // client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
         }
-
+ 
         public User GetUserById(string userId)
         {
             var response = client.GetAsync("api/v1/Users/" + userId).Result;

@@ -1,3 +1,4 @@
+using System.Net.Cache;
 using Application.Helpers;
 using Application.Interfaces;
 using AutoMapper;
@@ -23,7 +24,7 @@ namespace Application.Features.TicketFeatures.Commands.CreateTicketCommand
         {
             var ticket = _mapper.Map<Ticket>(request);
 
-            HttpRequestAccountsApi _request = new HttpRequestAccountsApi();
+            HttpRequestAccountsApi _request = new HttpRequestAccountsApi(request.UserToken);
             var user = _request.GetUserById(ticket.UserId);
             var location = user.Location;
             var consultant = _request.GetBestConsultant(ticket.Category, location);
