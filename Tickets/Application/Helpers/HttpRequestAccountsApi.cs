@@ -15,14 +15,17 @@ namespace Application.Helpers
         private readonly HttpClient client;
         public HttpRequestAccountsApi(string token)
         {
-            // var handler = new HttpClientHandler();
-            // handler.SslProtocols = SslProtocols.Tls12;
-            client = new HttpClient();
-            client.BaseAddress = new Uri(AppSettings.BaseAddress);
-            client.DefaultRequestHeaders.Add("User-Agent", "Anything");
-            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            // client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            client = new HttpClient() 
+            {
+                BaseAddress = new Uri(AppSettings.BaseAddress);
+                DefaultRequestHeaders.Add("User-Agent", "Anything");
+                DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            }
+            // client.BaseAddress = new Uri(AppSettings.BaseAddress);
+            // client.DefaultRequestHeaders.Add("User-Agent", "Anything");
+            // client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+            // client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
  
         public User GetUserById(string userId)
