@@ -14,6 +14,7 @@ namespace WebApi.Validators
         {
             High, Medium, Low
         };
+        
         public CreateTicketCommandValidator()
         {
             const string idRegex = "^[a-f\\d]{24}$";

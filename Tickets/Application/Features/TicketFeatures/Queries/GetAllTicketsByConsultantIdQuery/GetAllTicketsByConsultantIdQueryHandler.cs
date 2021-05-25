@@ -21,10 +21,10 @@ namespace Application.Features.TicketFeatures.Queries.GetAllTicketsByConsultantI
         public async Task<IEnumerable<Ticket>> Handle(GetAllTicketsByConsultantIdQuery request, CancellationToken cancellationToken)
         {
             var listTickets = await _repository.GetAllByConsultantIdAsync(request.ConsultantId);
-            if (!listTickets.Any())
-            {
+
+            if ( !listTickets.Any() )
                 throw new ArgumentException("Consultant does not have any received tickets.", nameof(request));
-            }
+
             return listTickets;
         }
     }

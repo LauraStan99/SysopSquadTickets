@@ -21,8 +21,10 @@ namespace Application.Features.TicketFeatures.Queries.GetTicketByIdQuery
         public async Task<Ticket> Handle(GetTicketByIdQuery request, CancellationToken cancellationToken)
         {
             var ticket = await _repository.GetByIdAsync(request.Id);
+
             if (ticket == null)
                 throw new ArgumentException("Ticket not found!", nameof(request));
+                
             HttpRequestAccountsApi _request = new HttpRequestAccountsApi(request.UserToken);
             var consultant = _request.GetConsultantById(ticket.ConsultantId);
             ticket.ConsultantScore = consultant.Score;

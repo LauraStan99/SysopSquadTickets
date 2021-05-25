@@ -5,7 +5,6 @@ namespace Persistence.Repository.v1
 {
     public class TicketRepository : Repository<Ticket>, ITicketRepository
     {
-        public TicketRepository(IApplicationDbContext context) : base(context) {
-        }
+        public TicketRepository(IApplicationDbContext context) : base(context) { }
     }
 }

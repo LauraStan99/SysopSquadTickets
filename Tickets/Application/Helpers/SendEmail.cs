@@ -35,6 +35,7 @@ namespace Application.Helpers
                 "<p>At this moment it has been taken over by one of our consultants. You will receive more information soon.</p>" +
                 "<p>Best regards, Sysop Squad Team! </p>";
             }
+
             if (status == "Open")
             {
                 mailMessage.Body = "<h1>Welcome " + user.Username + "!</h1>" +
@@ -42,6 +43,7 @@ namespace Application.Helpers
                 "<p>You will receinve more information as soon as possible.</p>" +
                 "<p>Best regards, Sysop Squad Team! </p>";
             }
+            
             if (status == "Cancelled")
             {
                 mailMessage.Body = "<h1>Welcome " + user.Username + "!</h1>" +

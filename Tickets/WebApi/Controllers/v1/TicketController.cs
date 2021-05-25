@@ -104,8 +104,10 @@ namespace WebApi.Controllers.v1
         public async Task<IActionResult> Create([FromBody] CreateTicketCommand command)
         {
             var ticket = await Mediator.Send(command);
+
             if (ticket == null)
                 return BadRequest();
+
             return Ok(ticket);
         }
 
@@ -141,8 +143,10 @@ namespace WebApi.Controllers.v1
         public async Task<IActionResult> Delete(string id)
         {
             var deleted = await Mediator.Send(new DeleteTicketByIdCommand(id));
-            if(deleted)
+
+            if (deleted)
                 return NoContent();
+                
             return NotFound();
         }
     }

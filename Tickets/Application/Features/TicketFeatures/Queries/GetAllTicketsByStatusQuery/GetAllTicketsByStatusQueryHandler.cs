@@ -22,10 +22,9 @@ namespace Application.Features.TicketFeatures.Queries.GetAllTicketsByStatusQuery
         {
             var listTickets = await _repository.GetAllByStatusAsync(request.Status);
 
-            if(!listTickets.Any())
-            {
+            if ( !listTickets.Any() )
                 throw new ArgumentException("There are no tickets with this status.", nameof(request));
-            }
+                
             return listTickets;
         }
     }

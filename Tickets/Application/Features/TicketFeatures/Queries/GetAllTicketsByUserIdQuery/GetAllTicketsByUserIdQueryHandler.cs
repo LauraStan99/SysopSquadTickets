@@ -21,10 +21,10 @@ namespace Application.Features.TicketFeatures.Queries.GetAllTicketsByUserIdQuery
         public async Task<IEnumerable<Ticket>> Handle(GetAllTicketsByUserIdQuery request, CancellationToken cancellationToken)
         {
             IEnumerable<Ticket> listTickets = await _repository.GetAllByUserIdAsync(request.UserId);
-            if(!listTickets.Any())
-            {
+            
+            if( !listTickets.Any() )
                 throw new ArgumentException("User does not have any sent tickets.", nameof(request));
-            }
+
             return listTickets;
         }
     }
