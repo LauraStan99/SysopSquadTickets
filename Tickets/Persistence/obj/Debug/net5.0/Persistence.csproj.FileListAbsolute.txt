@@ -31,7 +31,6 @@ C:\Fac\SysopSquadTickets\Tickets\Persistence\obj\Debug\net5.0\Persistence.csproj
 C:\Fac\SysopSquadTickets\Tickets\Persistence\obj\Debug\net5.0\Persistence.dll
 C:\Fac\SysopSquadTickets\Tickets\Persistence\obj\Debug\net5.0\ref\Persistence.dll
 C:\Fac\SysopSquadTickets\Tickets\Persistence\obj\Debug\net5.0\Persistence.pdb
-C:\Fac\SysopSquadTickets\Tickets\Persistence\obj\Debug\net5.0\Persistence.csprojAssemblyReference.cache
 D:\TSP.NET\SysopSquadTickets\Tickets\Persistence\bin\Debug\net5.0\Persistence.deps.json
 D:\TSP.NET\SysopSquadTickets\Tickets\Persistence\bin\Debug\net5.0\Persistence.dll
 D:\TSP.NET\SysopSquadTickets\Tickets\Persistence\bin\Debug\net5.0\ref\Persistence.dll
@@ -49,3 +48,4 @@ D:\TSP.NET\SysopSquadTickets\Tickets\Persistence\obj\Debug\net5.0\Persistence.cs
 D:\TSP.NET\SysopSquadTickets\Tickets\Persistence\obj\Debug\net5.0\Persistence.dll
 D:\TSP.NET\SysopSquadTickets\Tickets\Persistence\obj\Debug\net5.0\ref\Persistence.dll
 D:\TSP.NET\SysopSquadTickets\Tickets\Persistence\obj\Debug\net5.0\Persistence.pdb
+C:\Fac\SysopSquadTickets\Tickets\Persistence\obj\Debug\net5.0\Persistence.csproj.AssemblyReference.cache

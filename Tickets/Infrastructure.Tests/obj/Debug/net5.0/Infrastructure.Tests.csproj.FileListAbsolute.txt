@@ -298,4 +298,4 @@ D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infra
 D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\ref\Infrastructure.Tests.dll
 D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infrastructure.Tests.pdb
 D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infrastructure.Tests.genruntimeconfig.cache
-C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infrastructure.Tests.csprojAssemblyReference.cache
+C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infrastructure.Tests.csproj.AssemblyReference.cache

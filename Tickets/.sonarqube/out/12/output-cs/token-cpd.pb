@@ -261,7 +261,7 @@ GetSection) 3
 ;J K
 } 	
 } 
-} ë^
+} Ãb
 HC:\Fac\SysopSquadTickets\Tickets\Persistence\Repository\v1\Repository.cs
 	namespace		 	
 Persistence		
@@ -293,142 +293,109 @@ Repository 
 
 BaseEntityL V
 { 
-private 
-readonly !
-IApplicationDbContext .
-_context/ 7
-;7 8
-public 
+private 
+enum 
+Status 
+{ 	
+Open 
+, 
+Solved 
+, 
+Canceled "
+} 	
+;	 
+
+private 
+readonly !
+IApplicationDbContext .
+_context/ 7
+;7 8
+public 
 
-Repository 
-( !
-IApplicationDbContext /
-context0 7
-)7 8
-{ 	
-_context 
-= 
-context 
-; 
-} 	
-public 
-async 
-Task 
-< 
-IEnumerable %
-<% &
-TEntity& -
->- .
->. /
-GetAllAsync0 ;
-(; <
-)< =
-{ 	
-try 
-{ 
-return 
-await 
-_context %
-.% &
-GetCollection& 3
-<3 4
-TEntity4 ;
->; <
-(< =
-)= >
-.> ?
-	FindAsync? H
-(H I
-entityI O
-=>P R
-trueS W
-)W X
-.X Y
-ResultY _
-._ `
-ToListAsync` k
-(k l
-)l m
-;m n
-} 
-catch 
-( 
-	Exception 
-ex 
-)  
-{ 
-throw 
-new 
-ArgumentException +
-(+ ,
-$", .#
-Couldn't get entities: . E
-{E F
-exF H
-.H I
-MessageI P
-}P Q
-"Q R
-)R S
-;S T
-} 
-} 	
-public   
-async   
-Task   
-<   
-TEntity   !
->  ! "
-GetByIdAsync  # /
-(  / 0
-string  0 6
-id  7 9
-)  9 :
-{!! 	
-return"" 
-await"" 
-_context"" !
-.""! "
-GetCollection""" /
-<""/ 0
-TEntity""0 7
->""7 8
-(""8 9
-)""9 :
-."": ;
-Find""; ?
-<""? @
-TEntity""@ G
->""G H
-(""H I
-entity""I O
-=>""P R
-entity""S Y
-.""Y Z
-Id""Z \
-==""] _
-id""` b
-)""b c
-.""c d
-FirstOrDefaultAsync""d w
-(""w x
-)""x y
-;""y z
+Repository 
+( !
+IApplicationDbContext /
+context0 7
+)7 8
+{ 	
+_context 
+= 
+context 
+; 
+} 	
+public 
+async 
+Task 
+< 
+IEnumerable %
+<% &
+TEntity& -
+>- .
+>. /
+GetAllAsync0 ;
+(; <
+)< =
+{ 	
+try 
+{ 
+return 
+await 
+_context %
+.% &
+GetCollection& 3
+<3 4
+TEntity4 ;
+>; <
+(< =
+)= >
+.> ?
+	FindAsync? H
+(H I
+entityI O
+=>P R
+trueS W
+)W X
+.X Y
+ResultY _
+._ `
+ToListAsync` k
+(k l
+)l m
+;m n
+} 
+catch 
+( 
+	Exception 
+ex 
+)  
+{   
+throw!! 
+new!! 
+ArgumentException!! +
+(!!+ ,
+$"!!, .#
+Couldn't get entities: !!. E
+{!!E F
+ex!!F H
+.!!H I
+Message!!I P
+}!!P Q
+"!!Q R
+)!!R S
+;!!S T
+}"" 
 }## 	
 public%% 
 async%% 
 Task%% 
-<%% 
-IEnumerable%% %
-<%%% &
-TEntity%%& -
->%%- .
->%%. /
-GetAllByUserIdAsync%%0 C
-(%%C D
-string%%D J
-userId%%K Q
-)%%Q R
+<%% 
+TEntity%% !
+>%%! "
+GetByIdAsync%%# /
+(%%/ 0
+string%%0 6
+id%%7 9
+)%%9 :
 {&& 	
 return'' 
 await'' 
@@ -440,24 +407,25 @@ Repository 
 >''7 8
 (''8 9
 )''9 :
-.'': ;
-	FindAsync''; D
-(''D E
-entity''E K
-=>''L N
-entity''O U
-.''U V
-UserId''V \
-==''] _
-userId''` f
-)''f g
-.''g h
-Result''h n
-.''n o
-ToListAsync''o z
-(''z {
-)''{ |
-;''| }
+.'': ;
+Find''; ?
+<''? @
+TEntity''@ G
+>''G H
+(''H I
+entity''I O
+=>''P R
+entity''S Y
+.''Y Z
+Id''Z \
+==''] _
+id''` b
+)''b c
+.''c d
+FirstOrDefaultAsync''d w
+(''w x
+)''x y
+;''y z
 }(( 	
 public** 
 async** 
@@ -467,481 +435,547 @@ Repository 
 <**% &
 TEntity**& -
 >**- .
->**. /%
-GetAllByConsultantIdAsync**0 I
-(**I J
-string**J P
-consultantId**Q ]
-)**] ^
-{++ 	
-try,, 
-{-- 
-return.. 
-await.. 
-_context.. %
-...% &
-GetCollection..& 3
-<..3 4
-TEntity..4 ;
->..; <
-(..< =
-)..= >
-...> ?
-	FindAsync..? H
-(..H I
-entity..I O
-=>..P R
-entity..S Y
-...Y Z
-ConsultantId..Z f
-==..g i
-consultantId..j v
-)..v w
-...w x
-Result..x ~
-...~ 
-ToListAsync	.. ä
+>**. /
+GetAllByUserIdAsync**0 C
+(**C D
+string**D J
+userId**K Q
+)**Q R
+{++ 	
+return,, 
+await,, 
+_context,, !
+.,,! "
+GetCollection,," /
+<,,/ 0
+TEntity,,0 7
+>,,7 8
+(,,8 9
+),,9 :
+.,,: ;
+	FindAsync,,; D
+(,,D E
+entity,,E K
+=>,,L N
+entity,,O U
+.,,U V
+UserId,,V \
+==,,] _
+userId,,` f
+),,f g
+.,,g h
+Result,,h n
+.,,n o
+ToListAsync,,o z
+(,,z {
+),,{ |
+;,,| }
+}-- 	
+public// 
+async// 
+Task// 
+<// 
+IEnumerable// %
+<//% &
+TEntity//& -
+>//- .
+>//. /%
+GetAllByConsultantIdAsync//0 I
+(//I J
+string//J P
+consultantId//Q ]
+)//] ^
+{00 	
+try11 
+{22 
+return33 
+await33 
+_context33 %
+.33% &
+GetCollection33& 3
+<333 4
+TEntity334 ;
+>33; <
+(33< =
+)33= >
+.33> ?
+	FindAsync33? H
+(33H I
+entity33I O
+=>33P R
+entity33S Y
+.33Y Z
+ConsultantId33Z f
+==33g i
+consultantId33j v
+)33v w
+.33w x
+Result33x ~
+.33~ 
+ToListAsync	33 ä
 (
-..ä ã
+33ä ã
 )
-..ã å
+33ã å
 ;
-..å ç
-}// 
-catch00 
-(00 
-	Exception00 
-ex00 
-)00  
-{11 
-throw22 
-new22 
-ArgumentException22 +
-(22+ ,
-$"22, .#
-Couldn't get entities: 22. E
-{22E F
-ex22F H
-.22H I
-Message22I P
-}22P Q
-"22Q R
-)22R S
-;22S T
-}33 
-}44 	
-public66 
-async66 
-Task66 
-<66 
-IEnumerable66 %
-<66% &
-TEntity66& -
->66- .
->66. /
-GetAllByStatusAsync660 C
-(66C D
-string66D J
-status66K Q
-)66Q R
-{77 	
-return88 
-await88 
-_context88 !
-.88! "
-GetCollection88" /
-<88/ 0
-TEntity880 7
->887 8
-(888 9
-)889 :
-.88: ;
-	FindAsync88; D
-(88D E
-entity88E K
-=>88L N
-entity88O U
-.88U V
-Status88V \
-==88] _
-status88` f
-)88f g
-.88g h
-Result88h n
-.88n o
-ToListAsync88o z
-(88z {
-)88{ |
-;88| }
+33å ç
+}44 
+catch55 
+(55 
+	Exception55 
+ex55 
+)55  
+{66 
+throw77 
+new77 
+ArgumentException77 +
+(77+ ,
+$"77, .#
+Couldn't get entities: 77. E
+{77E F
+ex77F H
+.77H I
+Message77I P
+}77P Q
+"77Q R
+)77R S
+;77S T
+}88 
 }99 	
 public;; 
 async;; 
 Task;; 
-<;; 
-TEntity;; !
->;;! "
-CreateAsync;;# .
-(;;. /
-TEntity;;/ 6
-entity;;7 =
-);;= >
-{<< 	
-await== 
-_context== 
-.== 
-GetCollection== (
-<==( )
-TEntity==) 0
->==0 1
-(==1 2
-)==2 3
-.==3 4
-InsertOneAsync==4 B
-(==B C
-entity==C I
-)==I J
-;==J K
-return>> 
-entity>> 
-;>> 
-}?? 	
-publicAA 
-asyncAA 
-TaskAA 
-<AA 
-TEntityAA !
->AA! "
-UpdateAsyncAA# .
-(AA. /
-TEntityAA/ 6
-entityAA7 =
-)AA= >
-{BB 	
-varCC 
-foundEntityCC 
-=CC 
-awaitCC #+
-GetByUserIdAndConsultantIdAsyncCC$ C
-(CCC D
-entityCCD J
-.CCJ K
-UserIdCCK Q
-,CCQ R
-entityCCS Y
-.CCY Z
-ConsultantIdCCZ f
-)CCf g
-;CCg h
-ifEE 
-(EE 
-foundEntityEE 
-==EE 
-nullEE #
-)EE# $
-returnFF 
-nullFF 
-;FF 
-foundEntityHH 
-.HH 
-StatusHH 
-=HH  
-entityHH! '
-.HH' (
-StatusHH( .
-;HH. /
-foundEntityII 
-.II 
-UserIdII 
-=II  
-entityII! '
-.II' (
-UserIdII( .
-;II. /
-foundEntityJJ 
-.JJ 
-ConsultantIdJJ $
-=JJ% &
-entityJJ' -
-.JJ- .
-ConsultantIdJJ. :
-;JJ: ;
-foundEntityKK 
-.KK 
-PriorityKK  
-=KK! "
-entityKK# )
-.KK) *
-PriorityKK* 2
-;KK2 3
-awaitLL 
-_contextLL 
-.LL 
-GetCollectionLL (
-<LL( )
-TEntityLL) 0
->LL0 1
-(LL1 2
-)LL2 3
-.LL3 4
-ReplaceOneAsyncLL4 C
-(LLC D
-filterLLD J
-:LLJ K
-ticketLLL R
-=>LLS U
-ticketLLV \
-.LL\ ]
-IdLL] _
-==LL` b
-foundEntityLLc n
-.LLn o
-IdLLo q
-,LLq r
-replacementLLs ~
-:LL~ 
+<;; 
+IEnumerable;; %
+<;;% &
+TEntity;;& -
+>;;- .
+>;;. /
+GetAllByStatusAsync;;0 C
+(;;C D
+string;;D J
+status;;K Q
+);;Q R
+{<< 	
+return== 
+await== 
+_context== !
+.==! "
+GetCollection==" /
+<==/ 0
+TEntity==0 7
+>==7 8
+(==8 9
+)==9 :
+.==: ;
+	FindAsync==; D
+(==D E
+entity==E K
+=>==L N
+entity==O U
+.==U V
+Status==V \
+====] _
+status==` f
+)==f g
+.==g h
+Result==h n
+.==n o
+ToListAsync==o z
+(==z {
+)=={ |
+;==| }
+}>> 	
+public@@ 
+async@@ 
+Task@@ 
+<@@ 
+TEntity@@ !
+>@@! "
+CreateAsync@@# .
+(@@. /
+TEntity@@/ 6
+entity@@7 =
+)@@= >
+{AA 	
+awaitBB 
+_contextBB 
+.BB 
+GetCollectionBB (
+<BB( )
+TEntityBB) 0
+>BB0 1
+(BB1 2
+)BB2 3
+.BB3 4
+InsertOneAsyncBB4 B
+(BBB C
+entityBBC I
+)BBI J
+;BBJ K
+returnCC 
+entityCC 
+;CC 
+}DD 	
+publicFF 
+asyncFF 
+TaskFF 
+<FF 
+TEntityFF !
+>FF! "
+UpdateAsyncFF# .
+(FF. /
+TEntityFF/ 6
+entityFF7 =
+)FF= >
+{GG 	
+varHH 
+foundEntityHH 
+=HH 
+awaitHH #+
+GetByUserIdAndConsultantIdAsyncHH$ C
+(HHC D
+entityHHD J
+.HHJ K
+UserIdHHK Q
+,HHQ R
+entityHHS Y
+.HHY Z
+ConsultantIdHHZ f
+)HHf g
+;HHg h
+ifJJ 
+(JJ 
+foundEntityJJ 
+==JJ 
+nullJJ #
+)JJ# $
+returnKK 
+nullKK 
+;KK 
+foundEntityMM 
+.MM 
+StatusMM 
+=MM  
+entityMM! '
+.MM' (
+StatusMM( .
+;MM. /
+foundEntityNN 
+.NN 
+UserIdNN 
+=NN  
+entityNN! '
+.NN' (
+UserIdNN( .
+;NN. /
+foundEntityOO 
+.OO 
+ConsultantIdOO $
+=OO% &
+entityOO' -
+.OO- .
+ConsultantIdOO. :
+;OO: ;
+foundEntityPP 
+.PP 
+PriorityPP  
+=PP! "
+entityPP# )
+.PP) *
+PriorityPP* 2
+;PP2 3
+awaitQQ 
+_contextQQ 
+.QQ 
+GetCollectionQQ (
+<QQ( )
+TEntityQQ) 0
+>QQ0 1
+(QQ1 2
+)QQ2 3
+.QQ3 4
+ReplaceOneAsyncQQ4 C
+(QQC D
+filterQQD J
+:QQJ K
+ticketQQL R
+=>QQS U
+ticketQQV \
+.QQ\ ]
+IdQQ] _
+==QQ` b
+foundEntityQQc n
+.QQn o
+IdQQo q
+,QQq r
+replacementQQs ~
+:QQ~ 
 foundEntity
-LLÄ ã
+QQÄ ã
 )
-LLã å
+QQã å
 ;
-LLå ç
-returnMM 
-foundEntityMM 
-;MM 
-}NN 	
-publicPP 
-asyncPP 
-TaskPP 
-<PP 
-TEntityPP !
->PP! "
-UpdateStatusAsyncPP# 4
-(PP4 5
-TEntityPP5 <
-entityPP= C
-)PPC D
-{QQ 	
-varRR 
-foundEntityRR 
-=RR 
-awaitRR #
-GetByIdAsyncRR$ 0
-(RR0 1
-entityRR1 7
-.RR7 8
-IdRR8 :
-)RR: ;
-;RR; <
-ifSS 
-(SS 
-foundEntitySS 
-==SS 
-nullSS #
-)SS# $
-returnTT 
-nullTT 
-;TT 
-foundEntityVV 
-.VV 
-StatusVV 
-=VV  
-entityVV! '
-.VV' (
-StatusVV( .
-;VV. /
-ifWW 
-(WW 
-entityWW 
-.WW 
-MessageWW 
-!=WW  
-nullWW! %
-)WW% &
-{XX 
-foundEntityYY 
-.YY 
-MessageYY #
-=YY$ %
-entityYY& ,
-.YY, -
-MessageYY- 4
-;YY4 5
-}ZZ 
-await\\ 
-_context\\ 
-.\\ 
-GetCollection\\ (
-<\\( )
-TEntity\\) 0
->\\0 1
-(\\1 2
-)\\2 3
-.\\3 4
-ReplaceOneAsync\\4 C
-(\\C D
-filter\\D J
-:\\J K
-t\\L M
-=>\\N P
-t\\Q R
-.\\R S
-Id\\S U
-==\\V X
-entity\\Y _
-.\\_ `
-Id\\` b
-,\\b c
-replacement\\d o
-:\\o p
-foundEntity\\q |
-)\\| }
-;\\} ~
-return]] 
-foundEntity]] 
-;]] 
-}^^ 	
-public`` 
-async`` 
-Task`` 
-<`` 
-bool`` 
->`` 
-DeleteAsync``  +
-(``+ ,
-string``, 2
-id``3 5
-)``5 6
-{aa 	
-varbb 
-deleteResultbb 
-=bb 
-awaitbb $
-_contextbb% -
-.bb- .
-GetCollectionbb. ;
-<bb; <
-TEntitybb< C
->bbC D
-(bbD E
-)bbE F
-.bbF G
-DeleteOneAsyncbbG U
-(bbU V
-ticketbbV \
-=>bb] _
-ticketbb` f
-.bbf g
-Idbbg i
-==bbj l
-idbbm o
-)bbo p
-;bbp q
-returndd 
-deleteResultdd 
-.dd  
-IsAcknowledgeddd  .
-&&dd/ 1
-deleteResultdd2 >
-.dd> ?
-DeletedCountdd? K
->ddL M
-$numddN O
-;ddO P
-}ee 	
-publicgg 
-asyncgg 
-Taskgg 
-<gg 
-TEntitygg !
->gg! "+
-GetByUserIdAndConsultantIdAsyncgg# B
-(ggB C
-stringggC I
-userIdggJ P
-,ggP Q
-stringggR X
-consultantIdggY e
-)gge f
-{hh 	
-ifii 
-(ii 
-stringii 
-.ii 
-IsNullOrEmptyii $
-(ii$ %
-userIdii% +
-)ii+ ,
-||ii- /
-stringii0 6
-.ii6 7
-IsNullOrEmptyii7 D
-(iiD E
-consultantIdiiE Q
-)iiQ R
-)iiR S
-returnjj 
-nulljj 
-;jj 
-varll 
-ticketll 
-=ll 
-awaitll 
-_contextll '
-.ll' (
-GetCollectionll( 5
-<ll5 6
-TEntityll6 =
->ll= >
-(ll> ?
-)ll? @
-.ll@ A
-FindllA E
-<llE F
-TEntityllF M
->llM N
-(llN O
-itemllO S
-=>llT V
-itemllW [
-.ll[ \
-UserIdll\ b
-==llc e
-userIdllf l
-&&llm o
-itemllp t
-.llt u
-ConsultantId	llu Å
+QQå ç
+returnRR 
+foundEntityRR 
+;RR 
+}SS 	
+publicUU 
+asyncUU 
+TaskUU 
+<UU 
+TEntityUU !
+>UU! "
+UpdateStatusAsyncUU# 4
+(UU4 5
+TEntityUU5 <
+entityUU= C
+)UUC D
+{VV 	
+varWW 
+foundEntityWW 
+=WW 
+awaitWW #
+GetByIdAsyncWW$ 0
+(WW0 1
+entityWW1 7
+.WW7 8
+IdWW8 :
+)WW: ;
+;WW; <
+ifXX 
+(XX 
+foundEntityXX 
+==XX 
+nullXX #
+)XX# $
+returnYY 
+nullYY 
+;YY 
+if[[ 
+([[ 
+entity[[ 
+.[[ 
+Status[[ 
+!=[[ 
+null[[  $
+)[[$ %
+{\\ 
+foundEntity]] 
+.]] 
+Status]] "
+=]]# $
+entity]]% +
+.]]+ ,
+Status]], 2
+;]]2 3
+}^^ 
+if`` 
+(`` 
+entity`` 
+.`` 
+Message`` 
+!=``  
+null``! %
+)``% &
+{aa 
+foundEntitybb 
+.bb 
+Messagebb #
+=bb$ %
+entitybb& ,
+.bb, -
+Messagebb- 4
+;bb4 5
+foundEntitycc 
+.cc 
+Statuscc "
+=cc# $
+Statuscc% +
+.cc+ ,
+Solvedcc, 2
+.cc2 3
+ToStringcc3 ;
+(cc; <
+)cc< =
+;cc= >
+}dd 
+awaitff 
+_contextff 
+.ff 
+GetCollectionff (
+<ff( )
+TEntityff) 0
+>ff0 1
+(ff1 2
+)ff2 3
+.ff3 4
+ReplaceOneAsyncff4 C
+(ffC D
+filterffD J
+:ffJ K
+tffL M
+=>ffN P
+tffQ R
+.ffR S
+IdffS U
+==ffV X
+entityffY _
+.ff_ `
+Idff` b
+,ffb c
+replacementffd o
+:ffo p
+foundEntityffq |
+)ff| }
+;ff} ~
+returngg 
+foundEntitygg 
+;gg 
+}hh 	
+publicjj 
+asyncjj 
+Taskjj 
+<jj 
+booljj 
+>jj 
+DeleteAsyncjj  +
+(jj+ ,
+stringjj, 2
+idjj3 5
+)jj5 6
+{kk 	
+varll 
+deleteResultll 
+=ll 
+awaitll $
+_contextll% -
+.ll- .
+GetCollectionll. ;
+<ll; <
+TEntityll< C
+>llC D
+(llD E
+)llE F
+.llF G
+DeleteOneAsyncllG U
+(llU V
+ticketllV \
+=>ll] _
+ticketll` f
+.llf g
+Idllg i
+==llj l
+idllm o
+)llo p
+;llp q
+returnnn 
+deleteResultnn 
+.nn  
+IsAcknowledgednn  .
+&&nn/ 1
+deleteResultnn2 >
+.nn> ?
+DeletedCountnn? K
+>nnL M
+$numnnN O
+;nnO P
+}oo 	
+publicqq 
+asyncqq 
+Taskqq 
+<qq 
+TEntityqq !
+>qq! "+
+GetByUserIdAndConsultantIdAsyncqq# B
+(qqB C
+stringqqC I
+userIdqqJ P
+,qqP Q
+stringqqR X
+consultantIdqqY e
+)qqe f
+{rr 	
+ifss 
+(ss 
+stringss 
+.ss 
+IsNullOrEmptyss $
+(ss$ %
+userIdss% +
+)ss+ ,
+||ss- /
+stringss0 6
+.ss6 7
+IsNullOrEmptyss7 D
+(ssD E
+consultantIdssE Q
+)ssQ R
+)ssR S
+returntt 
+nulltt 
+;tt 
+varvv 
+ticketvv 
+=vv 
+awaitvv 
+_contextvv '
+.vv' (
+GetCollectionvv( 5
+<vv5 6
+TEntityvv6 =
+>vv= >
+(vv> ?
+)vv? @
+.vv@ A
+FindvvA E
+<vvE F
+TEntityvvF M
+>vvM N
+(vvN O
+itemvvO S
+=>vvT V
+itemvvW [
+.vv[ \
+UserIdvv\ b
+==vvc e
+userIdvvf l
+&&vvm o
+itemvvp t
+.vvt u
+ConsultantId	vvu Å
 ==
-llÇ Ñ
+vvÇ Ñ
 consultantId
-llÖ ë
+vvÖ ë
 )
-llë í
+vvë í
 .
-llí ì!
+vví ì!
 FirstOrDefaultAsync
-llì ¶
+vvì ¶
 (
-ll¶ ß
+vv¶ ß
 )
-llß ®
+vvß ®
 ;
-ll® ©
-ifnn 
-(nn 
-ticketnn 
-==nn 
-nullnn 
-)nn 
-returnoo 
-nulloo 
-;oo 
-returnqq 
-ticketqq 
-;qq 
-}rr 	
-}ss 
-}tt ¬
+vv® ©
+ifxx 
+(xx 
+ticketxx 
+==xx 
+nullxx 
+)xx 
+returnyy 
+nullyy 
+;yy 
+return{{ 
+ticket{{ 
+;{{ 
+}|| 	
+}}} 
+}~~ ¬
 NC:\Fac\SysopSquadTickets\Tickets\Persistence\Repository\v1\TicketRepository.cs
 	namespace 	
 Persistence
@@ -977,8 +1011,8 @@ Repository$ .
 contextF M
 )M N
 {O P
-}		 	
-}
+}Q R
+}		 
+}
 
- 
-} 
+ 

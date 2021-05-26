@@ -16,7 +16,6 @@ C:\Fac\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.Assembly
 C:\Fac\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.csproj.CoreCompileInputs.cache
 C:\Fac\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.dll
 C:\Fac\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.pdb
-C:\Fac\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.csprojAssemblyReference.cache
 D:\TSP.NET\SysopSquadTickets\Tickets\Domain\bin\Debug\netstandard2.1\Domain.deps.json
 D:\TSP.NET\SysopSquadTickets\Tickets\Domain\bin\Debug\netstandard2.1\Domain.dll
 D:\TSP.NET\SysopSquadTickets\Tickets\Domain\bin\Debug\netstandard2.1\Domain.pdb
@@ -26,3 +25,4 @@ D:\TSP.NET\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.Asse
 D:\TSP.NET\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.csproj.CoreCompileInputs.cache
 D:\TSP.NET\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.dll
 D:\TSP.NET\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.pdb
+C:\Fac\SysopSquadTickets\Tickets\Domain\obj\Debug\netstandard2.1\Domain.csproj.AssemblyReference.cache

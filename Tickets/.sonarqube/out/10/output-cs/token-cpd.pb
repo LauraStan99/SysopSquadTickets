@@ -188,172 +188,255 @@ xC:\Fac\SysopSquadTickets\Tickets\Application\Features\TicketFeatures\Commands\C
 Now6 9
 ;9 :
 } 
-} ≠
+} Ä!
 C:\Fac\SysopSquadTickets\Tickets\Application\Features\TicketFeatures\Commands\CreateTicketCommand\CreateTicketCommandHandler.cs
-	namespace		 	
-Application		
- 
-.		 
-Features		 
-.		 
-TicketFeatures		 -
-.		- .
-Commands		. 6
-.		6 7
-CreateTicketCommand		7 J
-{
+	namespace
 
- 
-public 
+ 	
+Application
+
+
+ 
+.
+
+ 
+Features
+
+ 
+.
+
+ 
+TicketFeatures
+
+ -
+.
+
+- .
+Commands
+
+. 6
+.
+
+6 7
+CreateTicketCommand
+
+7 J
+{ 
+public 
 
-class &
-CreateTicketCommandHandler +
-:, -
-IRequestHandler. =
-<= >
-CreateTicketCommand> Q
-,Q R
-TicketR X
->X Y
-{ 
-private 
-readonly 
-ITicketRepository *
-_repository+ 6
-;6 7
+class &
+CreateTicketCommandHandler +
+:, -
+IRequestHandler. =
+<= >
+CreateTicketCommand> Q
+,Q R
+TicketR X
+>X Y
+{ 
 private 
-readonly 
-IMapper  
-_mapper! (
-;( )
-public &
-CreateTicketCommandHandler )
-() *
-ITicketRepository* ;
+readonly 
+ITicketRepository *
+_repository+ 6
+;6 7
+private 
+readonly 
+IMapper  
+_mapper! (
+;( )
+public &
+CreateTicketCommandHandler )
+() *
+ITicketRepository* ;
 
-repository< F
-,F G
-IMapperH O
-mapperP V
-)V W
-{ 	
-_repository 
-= 
+repository< F
+,F G
+IMapperH O
+mapperP V
+)V W
+{ 	
+_repository 
+= 
 
-repository $
-;$ %
-_mapper 
-= 
-mapper 
-; 
-} 	
-public 
-async 
-Task 
-< 
-Ticket  
->  !
-Handle" (
-(( )
-CreateTicketCommand) <
-request= D
-,D E
-CancellationTokenF W
-cancellationTokenX i
-)i j
-{ 	
-var 
-ticket 
-= 
-_mapper  
-.  !
-Map! $
-<$ %
-Ticket% +
->+ ,
-(, -
-request- 4
-)4 5
-;5 6"
-HttpRequestAccountsApi "
-_request# +
-=, -
-new. 1"
-HttpRequestAccountsApi2 H
-(H I
-)I J
-;J K
-var 
-location 
-= 
-_request #
-.# $
-GetUserById$ /
-(/ 0
-ticket0 6
-.6 7
-UserId7 =
-)= >
-.> ?
-Location? G
-;G H
-var 
+repository $
+;$ %
+_mapper 
+= 
+mapper 
+; 
+} 	
+public 
+async 
+Task 
+< 
+Ticket  
+>  !
+Handle" (
+(( )
+CreateTicketCommand) <
+request= D
+,D E
+CancellationTokenF W
+cancellationTokenX i
+)i j
+{ 	
+var 
+ticket 
+= 
+_mapper  
+.  !
+Map! $
+<$ %
+Ticket% +
+>+ ,
+(, -
+request- 4
+)4 5
+;5 6"
+HttpRequestAccountsApi "
+_request# +
+=, -
+new. 1"
+HttpRequestAccountsApi2 H
+(H I
+)I J
+;J K
+var 
+user 
+= 
+_request 
+.  
+GetUserById  +
+(+ ,
+ticket, 2
+.2 3
+UserId3 9
+)9 :
+;: ;
+var 
+location 
+= 
+user 
+.  
+Location  (
+;( )
+var 
 
-consultant 
-= 
-_request %
-.% &
-GetBestConsultant& 7
-(7 8
-ticket8 >
-.> ?
-Category? G
-,G H
-locationI Q
-)Q R
-;R S
-ticket 
-. 
-ConsultantId 
-=  !
-
-consultant" ,
-., -
-Id- /
-;/ 0
+consultant 
+= 
+_request %
+.% &
+GetBestConsultant& 7
+(7 8
+ticket8 >
+.> ?
+Category? G
+,G H
+locationI Q
+)Q R
+;R S
 ticket   
-.   
-Status   
-=   
-$str   %
-;  % &
-_request"" 
-."" '
-UpdateNoOfTicketsConsultant"" 0
-(""0 1
+.   
+ConsultantId   
+=    !
 
-consultant""1 ;
-.""; <
-Id""< >
-,""> ?
+consultant  " ,
+.  , -
+Id  - /
+;  / 0
+ticket!! 
+.!! 
+Status!! 
+=!! 
+$str!! %
+;!!% &
+_request## 
+.## '
+UpdateNoOfTicketsConsultant## 0
+(##0 1
 
-consultant""@ J
-.""J K
-NumberOfTickets""K Z
-)""Z [
-;""[ \
-return$$ 
-await$$ 
-_repository$$ $
-.$$$ %
-CreateAsync$$% 0
-($$0 1
-ticket$$1 7
-)$$7 8
-;$$8 9
-}%% 	
-}&& 
-}'' ∞
+consultant##1 ;
+.##; <
+Id##< >
+,##> ?
+
+consultant##@ J
+.##J K
+NumberOfTickets##K Z
+,##Z [
+
+consultant##\ f
+.##f g 
+TotalNumberOfTickets##g {
+)##{ |
+;##| }
+	SendEmail$$ 
+
+_sendEmail$$  
+=$$! "
+new$$# &
+	SendEmail$$' 0
+($$0 1
+)$$1 2
+;$$2 3
+
+_sendEmail%% 
+.%% 
+SendEmailStatus%% &
+(%%& '
+ticket%%' -
+.%%- .
+Status%%. 4
+,%%4 5
+user%%6 :
+)%%: ;
+;%%; <
+ticket'' 
+.'' 
+ConsultantEmail'' "
+=''# $
+
+consultant''% /
+.''/ 0
+Email''0 5
+;''5 6
+ticket(( 
+.(( 
+ConsultantName(( !
+=((" #
+
+consultant(($ .
+.((. /
+Username((/ 7
+;((7 8
+ticket)) 
+.)) 
+	UserEmail)) 
+=)) 
+user)) #
+.))# $
+Email))$ )
+;))) *
+ticket** 
+.** 
+UserName** 
+=** 
+user** "
+.**" #
+Username**# +
+;**+ ,
+return,, 
+await,, 
+_repository,, $
+.,,$ %
+CreateAsync,,% 0
+(,,0 1
+ticket,,1 7
+),,7 8
+;,,8 9
+}-- 	
+}.. 
+}// ∞
 ÄC:\Fac\SysopSquadTickets\Tickets\Application\Features\TicketFeatures\Commands\DeleteTicketByIdCommand\DeleteTicketByIdCommand.cs
 	namespace 	
 Application
@@ -505,8 +588,7 @@ repository $
 ;< =
 } 	
 } 
-} ó
-
+} „	
 åC:\Fac\SysopSquadTickets\Tickets\Application\Features\TicketFeatures\Commands\UpdateStatusTicketByIdCommand\UpdateStatusTicketByIdCommand.cs
 	namespace 	
 Application
@@ -551,250 +633,256 @@ repository $
 ; 
 set  #
 ;# $
-}% &
-[ 	
-Required	 
-] 
-public 
-string 
-Status 
-{ 
-get "
-;" #
-set$ '
-;' (
-}) *
-public 
-string 
-Message 
-{ 
-get  #
-;# $
-set% (
-;( )
-}* +
-} 
-} ¡ 
+}% &
+public 
+string 
+Status 
+{ 
+get "
+;" #
+set$ '
+;' (
+}) *
+public 
+string 
+Message 
+{ 
+get  #
+;# $
+set% (
+;( )
+}* +
+} 
+} £"
 ìC:\Fac\SysopSquadTickets\Tickets\Application\Features\TicketFeatures\Commands\UpdateStatusTicketByIdCommand\UpdateStatusTicketByIdCommandHandler.cs
-	namespace		 	
-Application		
+	namespace 	
+Application
  
-.		 
-Features		 
-.		 
-TicketFeatures		 -
-.		- .
-Commands		. 6
-.		6 7)
-UpdateStatusTicketByIdCommand		7 T
-{
-
- 
-public 
+. 
+Features 
+. 
+TicketFeatures -
+.- .
+Commands. 6
+.6 7)
+UpdateStatusTicketByIdCommand7 T
+{ 
+public 
 
-class 0
-$UpdateStatusTicketByIdCommandHandler 5
-:6 7
-IRequestHandler8 G
-<G H)
-UpdateStatusTicketByIdCommandH e
-,e f
-Ticketg m
->m n
-{ 
-private 
-readonly 
-ITicketRepository *
-_repository+ 6
-;6 7
-private 
-readonly 
-IMapper  
-_mapper! (
-;( )
-public 0
-$UpdateStatusTicketByIdCommandHandler 3
-(3 4
-ITicketRepository4 E
+class 0
+$UpdateStatusTicketByIdCommandHandler 5
+:6 7
+IRequestHandler8 G
+<G H)
+UpdateStatusTicketByIdCommandH e
+,e f
+Ticketg m
+>m n
+{ 
+private 
+readonly 
+ITicketRepository *
+_repository+ 6
+;6 7
+private 
+readonly 
+IMapper  
+_mapper! (
+;( )
+public 0
+$UpdateStatusTicketByIdCommandHandler 3
+(3 4
+ITicketRepository4 E
 
-repositoryF P
-,P Q
-IMapperR Y
-mapperZ `
-)` a
-{ 	
-_repository 
-= 
+repositoryF P
+,P Q
+IMapperR Y
+mapperZ `
+)` a
+{ 	
+_repository 
+= 
 
-repository $
-;$ %
-_mapper 
-= 
-mapper 
-; 
-} 	
-public 
-async 
-Task 
-< 
-Ticket  
->  !
-Handle" (
-(( ))
-UpdateStatusTicketByIdCommand) F
-requestG N
-,N O
-CancellationTokenP a
-cancellationTokenb s
-)s t
-{ 	
-var 
-ticket 
-= 
-_mapper  
-.  !
-Map! $
-<$ %
-Ticket% +
->+ ,
-(, -
-request- 4
-)4 5
-;5 6
-var 
-updatedTicket 
-= 
-await  %
-_repository& 1
-.1 2
-UpdateStatusAsync2 C
-(C D
-ticketD J
-)J K
-;K L
-if 
-( 
-updatedTicket 
-==  
-null! %
-)% &
-return 
-null 
-; "
-HttpRequestAccountsApi "
-_request# +
-=, -
-new. 1"
-HttpRequestAccountsApi2 H
-(H I
-)I J
-;J K
-var 
-user 
-= 
-_request 
-.  
-GetUserById  +
-(+ ,
-updatedTicket, 9
-.9 :
-UserId: @
-)@ A
-;A B
-	SendEmail!! 
+repository $
+;$ %
+_mapper 
+= 
+mapper 
+; 
+} 	
+public 
+async 
+Task 
+< 
+Ticket  
+>  !
+Handle" (
+(( ))
+UpdateStatusTicketByIdCommand) F
+requestG N
+,N O
+CancellationTokenP a
+cancellationTokenb s
+)s t
+{ 	
+var 
+ticket 
+= 
+_mapper  
+.  !
+Map! $
+<$ %
+Ticket% +
+>+ ,
+(, -
+request- 4
+)4 5
+;5 6
+var 
+updatedTicket 
+= 
+await  %
+_repository& 1
+.1 2
+UpdateStatusAsync2 C
+(C D
+ticketD J
+)J K
+;K L
+if 
+( 
+updatedTicket 
+==  
+null! %
+)% &
+return 
+null 
+; "
+HttpRequestAccountsApi   "
+_request  # +
+=  , -
+new  . 1"
+HttpRequestAccountsApi  2 H
+(  H I
+)  I J
+;  J K
+var!! 
+user!! 
+=!! 
+_request!! 
+.!!  
+GetUserById!!  +
+(!!+ ,
+updatedTicket!!, 9
+.!!9 :
+UserId!!: @
+)!!@ A
+;!!A B
+	SendEmail"" 
 
-_sendEmail!!  
-=!!! "
-new!!# &
-	SendEmail!!' 0
-(!!0 1
-)!!1 2
-;!!2 3
-if## 
-(## 
-request## 
-.## 
-Status## 
-==## !
-$str##" *
-)##* +
-{$$ 
+_sendEmail""  
+=""! "
+new""# &
+	SendEmail""' 0
+(""0 1
+)""1 2
+;""2 3
+var## 
 
-_sendEmail%% 
-.%% %
-SendEmailStatusAndMessage%% 4
-(%%4 5
-request%%5 <
-.%%< =
-Status%%= C
-,%%C D
-user%%E I
-,%%I J
-request%%K R
-.%%R S
-Message%%S Z
-)%%Z [
-;%%[ \
-}&& 
-else'' 
-{(( 
+consultant## 
+=## 
+_request## %
+.##% &
+GetConsultantById##& 7
+(##7 8
+updatedTicket##8 E
+.##E F
+ConsultantId##F R
+)##R S
+;##S T
+if%% 
+(%% 
+request%% 
+.%% 
+Message%% 
+!=%%  "
+null%%# '
+)%%' (
+{&& 
 
-_sendEmail)) 
-.)) 
-SendEmailStatus)) *
-())* +
-request))+ 2
-.))2 3
-Status))3 9
-,))9 :
-user)); ?
-)))? @
-;))@ A
-}** 
-if,, 
-(,, 
-request,, 
-.,, 
-Status,, 
-!=,, !
-$str,," (
-),,( )
-{-- 
-var.. 
+_sendEmail'' 
+.'' %
+SendEmailStatusAndMessage'' 4
+(''4 5
+updatedTicket''5 B
+.''B C
+Status''C I
+,''I J
+user''K O
+,''O P
+request''Q X
+.''X Y
+Message''Y `
+)''` a
+;''a b
+_request(( 
+.(( -
+!UpdateSolvedNoOfTicketsConsultant(( :
+(((: ;
 
-consultant.. 
-=..  
-_request..! )
-...) *
-GetConsultantById..* ;
-(..; <
-updatedTicket..< I
-...I J
-ConsultantId..J V
-)..V W
-;..W X
-_request// 
-.// )
-IncreaseNoOfTicketsConsultant// 6
-(//6 7
+consultant((; E
+.((E F
+Id((F H
+,((H I
 
-consultant//7 A
-.//A B
-Id//B D
-,//D E
+consultant((J T
+.((T U!
+SolvedNumberOfTickets((U j
+)((j k
+;((k l
+})) 
+else** 
 
-consultant//F P
-.//P Q
-NumberOfTickets//Q `
-)//` a
-;//a b
-}00 
-return22 
-updatedTicket22  
-;22  !
-}33 	
-}44 
-}55 ª
+_sendEmail++ 
+.++ 
+SendEmailStatus++ *
+(++* +
+request+++ 2
+.++2 3
+Status++3 9
+,++9 :
+user++; ?
+)++? @
+;++@ A
+if-- 
+(-- 
+updatedTicket-- 
+.-- 
+Status-- $
+!=--% '
+$str--( .
+)--. /
+_request.. 
+... )
+IncreaseNoOfTicketsConsultant.. 6
+(..6 7
+
+consultant..7 A
+...A B
+Id..B D
+,..D E
+
+consultant..F P
+...P Q
+NumberOfTickets..Q `
+)..` a
+;..a b
+return00 
+updatedTicket00  
+;00  !
+}11 	
+}22 
+}33 ª
 ÄC:\Fac\SysopSquadTickets\Tickets\Application\Features\TicketFeatures\Commands\UpdateTicketByIdCommand\UpdateTicketByIdCommand.cs
 	namespace 	
 Application
@@ -1058,7 +1146,7 @@ repository $
 ;' (
 } 	
 } 
-} ±
+} ì
 òC:\Fac\SysopSquadTickets\Tickets\Application\Features\TicketFeatures\Queries\GetAllTicketsByConsultantIdQuery\GetAllTicketsByConsultantIdQueryHandler.cs
 	namespace
 
@@ -1159,16 +1247,15 @@ repository $
 ConsultantIdR ^
 )^ _
 ;_ `
-if 
-( 
-! 
-listTickets 
-. 
-Any  
-(  !
-)! "
-)" #
-{ 
+if 
+( 
+! 
+listTickets 
+. 
+Any !
+(! "
+)" #
+)$ %
 throw 
 new 
 ArgumentException +
@@ -1180,8 +1267,7 @@ repository $
 requeste l
 )l m
 )m n
-;n o
-} 
+;n o
 return 
 listTickets 
 ; 
@@ -1232,7 +1318,7 @@ repository $
 ; 
 } 	
 } 
-} ı
+} ◊
 åC:\Fac\SysopSquadTickets\Tickets\Application\Features\TicketFeatures\Queries\GetAllTicketsByStatusQuery\GetAllTicketsByStatusQueryHandler.cs
 	namespace
 
@@ -1332,34 +1418,32 @@ repository $
 )R S
 ;S T
 if 
-( 
-! 
-listTickets 
-. 
-Any 
-(  
-)  !
-)! "
-{ 
-throw 
-new 
-ArgumentException +
-(+ ,
-$str, T
-,T U
-nameofV \
-(\ ]
-request] d
-)d e
-)e f
-;f g
-} 
-return 
-listTickets 
-; 
-} 	
-} 
-}   Ü	
+( 
+! 
+listTickets 
+. 
+Any !
+(! "
+)" #
+)$ %
+throw 
+new 
+ArgumentException +
+(+ ,
+$str, T
+,T U
+nameofV \
+(\ ]
+request] d
+)d e
+)e f
+;f g
+return 
+listTickets 
+; 
+} 	
+} 
+} Ü	
 ÖC:\Fac\SysopSquadTickets\Tickets\Application\Features\TicketFeatures\Queries\GetAllTicketsByUserIdQuery\GetAllTicketsByUserIdQuery.cs
 	namespace 	
 Application
@@ -1417,7 +1501,7 @@ repository $
 ; 
 } 	
 } 
-} Ø
+} ë
 åC:\Fac\SysopSquadTickets\Tickets\Application\Features\TicketFeatures\Queries\GetAllTicketsByUserIdQuery\GetAllTicketsByUserIdQueryHandler.cs
 	namespace
 
@@ -1519,16 +1603,15 @@ repository $
 UserId\ b
 )b c
 ;c d
-if 
-( 
-! 
-listTickets 
-. 
-Any 
-(  
-)  !
-)! "
-{ 
+if 
+( 
+! 
+listTickets 
+. 
+Any  
+(  !
+)! "
+)# $
 throw 
 new 
 ArgumentException +
@@ -1540,8 +1623,7 @@ repository $
 request[ b
 )b c
 )c d
-;d e
-} 
+;d e
 return 
 listTickets 
 ; 
@@ -1736,123 +1818,153 @@ uC:\Fac\SysopSquadTickets\Tickets\Application\Features\TicketFeatures\Queries\Ge
 ; 
 } 	
 } 
-} Î
+} î
 |C:\Fac\SysopSquadTickets\Tickets\Application\Features\TicketFeatures\Queries\GetTicketByIdQuery\GetTicketByIdQueryHandler.cs
-	namespace 	
-Application
+	namespace
+
+ 	
+Application
+
+
  
-. 
-Features 
-. 
-TicketFeatures -
-.- .
-Queries. 5
-.5 6
-GetTicketByIdQuery6 H
-{		 
-public
+.
 
- 
-
-class
+ 
+Features
 
- %
-GetTicketByIdQueryHandler
+ 
+.
 
- *
-:
+ 
+TicketFeatures
 
-+ ,
-IRequestHandler
+ -
+.
 
-- <
-<
+- .
+Queries
 
-< =
+. 5
+.
+
+5 6
 GetTicketByIdQuery
 
-= O
-,
-
-O P
-Ticket
-
-Q W
->
-
-W X
-{ 
-private 
-readonly 
-ITicketRepository *
-_repository+ 6
-;6 7
-public %
-GetTicketByIdQueryHandler (
-(( )
-ITicketRepository) :
+6 H
+{ 
+public 
+
+class %
+GetTicketByIdQueryHandler *
+:+ ,
+IRequestHandler- <
+<< =
+GetTicketByIdQuery= O
+,O P
+TicketQ W
+>W X
+{ 
+private 
+readonly 
+ITicketRepository *
+_repository+ 6
+;6 7
+public %
+GetTicketByIdQueryHandler (
+(( )
+ITicketRepository) :
 
-repository; E
-)E F
-{ 	
-_repository 
-= 
+repository; E
+)E F
+{ 	
+_repository 
+= 
 
-repository $
-;$ %
-} 	
-public 
-async 
-Task 
-< 
-Ticket  
->  !
-Handle" (
-(( )
-GetTicketByIdQuery) ;
-request< C
-,C D
-CancellationTokenE V
-cancellationTokenW h
-)h i
-{ 	
-var 
-ticket 
-= 
-await 
-_repository *
-.* +
-GetByIdAsync+ 7
-(7 8
-request8 ?
-.? @
-Id@ B
-)B C
-;C D
-if 
-( 
-ticket 
-== 
-null 
-) 
-throw 
-new 
-ArgumentException +
-(+ ,
-$str, ?
-,? @
-nameofA G
-(G H
-requestH O
-)O P
-)P Q
-;Q R
-return 
-ticket 
-; 
-} 	
-} 
-} ≥	
+repository $
+;$ %
+} 	
+public 
+async 
+Task 
+< 
+Ticket  
+>  !
+Handle" (
+(( )
+GetTicketByIdQuery) ;
+request< C
+,C D
+CancellationTokenE V
+cancellationTokenW h
+)h i
+{ 	
+var 
+ticket 
+= 
+await 
+_repository *
+.* +
+GetByIdAsync+ 7
+(7 8
+request8 ?
+.? @
+Id@ B
+)B C
+;C D
+if 
+( 
+ticket 
+== 
+null 
+) 
+throw 
+new 
+ArgumentException +
+(+ ,
+$str, ?
+,? @
+nameofA G
+(G H
+requestH O
+)O P
+)P Q
+;Q R"
+HttpRequestAccountsApi "
+_request# +
+=, -
+new. 1"
+HttpRequestAccountsApi2 H
+(H I
+)I J
+;J K
+var 
+
+consultant 
+= 
+_request %
+.% &
+GetConsultantById& 7
+(7 8
+ticket8 >
+.> ?
+ConsultantId? K
+)K L
+;L M
+ticket 
+. 
+ConsultantScore "
+=# $
+
+consultant% /
+./ 0
+Score0 5
+;5 6
+return 
+ticket 
+; 
+}   	
+}!! 
+}"" ≥	
 õC:\Fac\SysopSquadTickets\Tickets\Application\Features\TicketFeatures\Queries\GetTicketByUserIdAndConsultantIdQuery\GetTicketByUserIdAndConsultantIdQuery.cs
 	namespace 	
 Application
@@ -2101,347 +2213,408 @@ IC:\Fac\SysopSquadTickets\Tickets\Application\Helpers\AutoMapperProfile.cs
 ;> ?
 } 	
 } 
-} •.
+} ›7
 NC:\Fac\SysopSquadTickets\Tickets\Application\Helpers\HttpRequestAccountsApi.cs
-	namespace 	
-Application
+	namespace 	
+Application
  
-. 
-Helpers 
-{ 
-public 
+. 
+Helpers 
+{ 
+public 
 
-class "
-HttpRequestAccountsApi '
-{		 
-private
-
- 
-readonly
-
- 
+class "
+HttpRequestAccountsApi '
+{ 
+private 
+readonly 
 
-HttpClient
-
- #
-client
-
-$ *
-;
-
-* +
-public "
-HttpRequestAccountsApi %
-(% &
-)& '
-{ 	
-client 
-= 
-new 
-
-HttpClient #
-{ 
-BaseAddress 
-= 
-new !
-Uri" %
-(% &
-AppSettings& 1
-.1 2
-BaseAddress2 =
-)= >
-} 
-; 
-client 
-. !
-DefaultRequestHeaders (
-.( )
-Add) ,
-(, -
-$str- 9
-,9 :
-$str; E
-)E F
-;F G
+HttpClient #
+client$ *
+;* +
+public "
+HttpRequestAccountsApi %
+(% &
+)& '
+{ 	
 client 
-. !
-DefaultRequestHeaders (
-.( )
-Accept) /
-./ 0
-Add0 3
-(3 4
-new4 7+
-MediaTypeWithQualityHeaderValue8 W
-(W X
-$strX j
-)j k
-)k l
-;l m
-} 	
-public 
-User 
-GetUserById 
-(  
-string  &
-userId' -
-)- .
-{ 	
-var 
-response 
-= 
-client !
-.! "
-GetAsync" *
-(* +
-$str+ :
-+; <
-userId= C
-)C D
-.D E
-ResultE K
-;K L
-response 
-. #
-EnsureSuccessStatusCode ,
-(, -
-)- .
-;. /
-var 
-result 
-= 
-response !
-.! "
-Content" )
-.) *
-ReadAsAsync* 5
-<5 6
-User6 :
->: ;
-(; <
-)< =
-.= >
-Result> D
-;D E
-return 
-result 
-; 
-} 	
-public 
+= 
+new 
 
-Consultant 
-GetConsultantById +
-(+ ,
-string, 2
-consultantId3 ?
-)? @
-{ 	
-var 
-response 
-= 
-client !
-.! "
-GetAsync" *
-(* +
-$str+ @
-+A B
-consultantIdC O
-)O P
-.P Q
-ResultQ W
-;W X
-response   
-.   #
-EnsureSuccessStatusCode   ,
-(  , -
-)  - .
-;  . /
-var!! 
-result!! 
-=!! 
-response!! !
-.!!! "
-Content!!" )
-.!!) *
-ReadAsAsync!!* 5
-<!!5 6
+HttpClient #
+(# $
+)$ %
+{ 
+BaseAddress 
+= 
+new !
+Uri" %
+(% &
+AppSettings& 1
+.1 2
+BaseAddress2 =
+)= >
+,> ?
+} 
+; 
+client 
+. !
+DefaultRequestHeaders (
+.( )
+Add) ,
+(, -
+$str- 9
+,9 :
+$str; E
+)E F
+;F G
+client 
+. !
+DefaultRequestHeaders (
+.( )
+Accept) /
+./ 0
+Add0 3
+(3 4
+new4 7+
+MediaTypeWithQualityHeaderValue8 W
+(W X
+$strX j
+)j k
+)k l
+;l m
+} 	
+public 
+User 
+GetUserById 
+(  
+string  &
+userId' -
+)- .
+{ 	
+var 
+response 
+= 
+client !
+.! "
+GetAsync" *
+(* +
+$str+ :
++; <
+userId= C
+)C D
+.D E
+ResultE K
+;K L
+response 
+. #
+EnsureSuccessStatusCode ,
+(, -
+)- .
+;. /
+var 
+result 
+= 
+response !
+.! "
+Content" )
+.) *
+ReadAsAsync* 5
+<5 6
+User6 :
+>: ;
+(; <
+)< =
+.= >
+Result> D
+;D E
+return 
+result 
+; 
+}   	
+public"" 
 
-Consultant!!6 @
->!!@ A
-(!!A B
-)!!B C
-.!!C D
-Result!!D J
-;!!J K
-return"" 
-result"" 
-;"" 
-}## 	
-public%% 
+Consultant"" 
+GetConsultantById"" +
+(""+ ,
+string"", 2
+consultantId""3 ?
+)""? @
+{## 	
+var$$ 
+response$$ 
+=$$ 
+client$$ !
+.$$! "
+GetAsync$$" *
+($$* +
+$str$$+ @
++$$A B
+consultantId$$C O
+)$$O P
+.$$P Q
+Result$$Q W
+;$$W X
+response%% 
+.%% #
+EnsureSuccessStatusCode%% ,
+(%%, -
+)%%- .
+;%%. /
+var&& 
+result&& 
+=&& 
+response&& !
+.&&! "
+Content&&" )
+.&&) *
+ReadAsAsync&&* 5
+<&&5 6
 
-Consultant%% 
-GetBestConsultant%% +
-(%%+ ,
-string%%, 2
-category%%3 ;
-,%%; <
-string%%= C
-location%%D L
-)%%L M
-{&& 	
-var'' 
-response'' 
-='' 
-client'' !
-.''! "
-GetAsync''" *
-(''* +
-$str''+ K
-+''L M
-category''N V
-+''W X
-$str''Y e
-+''f g
-location''h p
-)''p q
-.''q r
-Result''r x
-;''x y
-response(( 
-.(( #
-EnsureSuccessStatusCode(( ,
-(((, -
-)((- .
-;((. /
-var)) 
-result)) 
-=)) 
-response)) !
-.))! "
-Content))" )
-.))) *
-ReadAsAsync))* 5
-<))5 6
+Consultant&&6 @
+>&&@ A
+(&&A B
+)&&B C
+.&&C D
+Result&&D J
+;&&J K
+return'' 
+result'' 
+;'' 
+}(( 	
+public** 
 
-Consultant))6 @
->))@ A
-())A B
-)))B C
-.))C D
-Result))D J
-;))J K
-return** 
-result** 
-;** 
-}++ 	
-public-- 
-void-- '
-UpdateNoOfTicketsConsultant-- /
-(--/ 0
-string--0 6
-consultantId--7 C
-,--C D
-int--E H
-noOfTickets--I T
-)--T U
-{.. 	
+Consultant** 
+GetBestConsultant** +
+(**+ ,
+string**, 2
+category**3 ;
+,**; <
+string**= C
+location**D L
+)**L M
+{++ 	
+var,, 
+response,, 
+=,, 
+client,, !
+.,,! "
+GetAsync,," *
+(,,* +
+$str,,+ K
++,,L M
+category,,N V
++,,W X
+$str,,Y e
++,,f g
+location,,h p
+),,p q
+.,,q r
+Result,,r x
+;,,x y
+response-- 
+.-- #
+EnsureSuccessStatusCode-- ,
+(--, -
+)--- .
+;--. /
+var.. 
+result.. 
+=.. 
+response.. !
+...! "
+Content.." )
+...) *
+ReadAsAsync..* 5
+<..5 6
 
-Consultant// 
+Consultant..6 @
+>..@ A
+(..A B
+)..B C
+...C D
+Result..D J
+;..J K
+return// 
+result// 
+;// 
+}00 	
+public22 
+void22 '
+UpdateNoOfTicketsConsultant22 /
+(22/ 0
+string220 6
+consultantId227 C
+,22C D
+int22E H
+noOfTickets22I T
+,22T U
+int22V Y
+totalNoOfTickets22Z j
+)22j k
+{33 	
 
-consultant// !
-=//" #
-new//$ '
+Consultant44 
 
-Consultant//( 2
-{//3 4
-Id//5 7
-=//8 9
-consultantId//: F
-,//F G
-NumberOfTickets//H W
-=//X Y
-noOfTickets//Z e
--//f g
-$num//h i
-}//j k
-;//k l
-var00 
-response00 
-=00 
-client00 !
-.00! "
-PutAsJsonAsync00" 0
-(000 1
-$str001 E
-,00E F
+consultant44 !
+=44" #
+new44$ '
 
-consultant00G Q
-)00Q R
-.00R S
-Result00S Y
-;00Y Z
-response11 
-.11 #
-EnsureSuccessStatusCode11 ,
-(11, -
-)11- .
-;11. /
-}22 	
-public44 
-void44 )
-IncreaseNoOfTicketsConsultant44 1
-(441 2
-string442 8
-consultantId449 E
-,44E F
-int44G J
-noOfTickets44K V
-)44V W
-{55 	
+Consultant44( 2
+{443 4
+Id445 7
+=448 9
+consultantId44: F
+,44F G
+NumberOfTickets44H W
+=44X Y
+noOfTickets44Z e
+-44f g
+$num44h i
+,44i j 
+TotalNumberOfTickets44k 
+=
+44Ä Å
+totalNoOfTickets
+44Ç í
++
+44ì î
+$num
+44ï ñ
+}
+44ñ ó
+;
+44ó ò
+var55 
+response55 
+=55 
+client55 !
+.55! "
+PutAsJsonAsync55" 0
+(550 1
+$str551 E
+,55E F
 
-Consultant66 
+consultant55G Q
+)55Q R
+.55R S
+Result55S Y
+;55Y Z
+response66 
+.66 #
+EnsureSuccessStatusCode66 ,
+(66, -
+)66- .
+;66. /
+}77 	
+public99 
+void99 -
+!UpdateSolvedNoOfTicketsConsultant99 5
+(995 6
+string996 <
+consultantId99= I
+,99I J
+int99K N
+solvedNoOfTickets99O `
+)99` a
+{:: 	
 
-consultant66 !
-=66" #
-new66$ '
+Consultant;; 
 
-Consultant66( 2
-{663 4
-Id665 7
-=668 9
-consultantId66: F
-,66F G
-NumberOfTickets66H W
-=66X Y
-noOfTickets66Z e
-+66f g
-$num66h i
-}66j k
-;66k l
-var77 
-response77 
-=77 
-client77 !
-.77! "
-PutAsJsonAsync77" 0
-(770 1
-$str771 E
-,77E F
+consultant;; !
+=;;" #
+new;;$ '
 
-consultant77G Q
-)77Q R
-.77R S
-Result77S Y
-;77Y Z
-response88 
-.88 #
-EnsureSuccessStatusCode88 ,
-(88, -
-)88- .
-;88. /
-}99 	
-}:: 
-};; €"
+Consultant;;( 2
+{;;3 4
+Id;;5 7
+=;;8 9
+consultantId;;: F
+,;;F G!
+SolvedNumberOfTickets;;H ]
+=;;^ _
+solvedNoOfTickets;;` q
++;;r s
+$num;;t u
+};;v w
+;;;w x
+var<< 
+response<< 
+=<< 
+client<< !
+.<<! "
+PutAsJsonAsync<<" 0
+(<<0 1
+$str<<1 E
+,<<E F
+
+consultant<<G Q
+)<<Q R
+.<<R S
+Result<<S Y
+;<<Y Z
+response== 
+.== #
+EnsureSuccessStatusCode== ,
+(==, -
+)==- .
+;==. /
+}>> 	
+public@@ 
+void@@ )
+IncreaseNoOfTicketsConsultant@@ 1
+(@@1 2
+string@@2 8
+consultantId@@9 E
+,@@E F
+int@@G J
+noOfTickets@@K V
+)@@V W
+{AA 	
+
+ConsultantBB 
+
+consultantBB !
+=BB" #
+newBB$ '
+
+ConsultantBB( 2
+{BB3 4
+IdBB5 7
+=BB8 9
+consultantIdBB: F
+,BBF G
+NumberOfTicketsBBH W
+=BBX Y
+noOfTicketsBBZ e
++BBf g
+$numBBh i
+}BBj k
+;BBk l
+varCC 
+responseCC 
+=CC 
+clientCC !
+.CC! "
+PutAsJsonAsyncCC" 0
+(CC0 1
+$strCC1 E
+,CCE F
+
+consultantCCG Q
+)CCQ R
+.CCR S
+ResultCCS Y
+;CCY Z
+responseDD 
+.DD #
+EnsureSuccessStatusCodeDD ,
+(DD, -
+)DD- .
+;DD. /
+}EE 	
+}FF 
+}GG Ñ+
 AC:\Fac\SysopSquadTickets\Tickets\Application\Helpers\SendEmail.cs
 	namespace 	
 Application
@@ -2581,136 +2754,200 @@ SmtpClient '
 Subject 
 = 
 $str )
-,) *
-Body 
-= 
-$str %
-+& '
-user( ,
-., -
-Username- 5
-+5 6
-$str7 ?
-+? @
-$str   /
-+  0 1
-status  2 8
-+  9 :
-$str  ; A
-,  A B
+} 
+; 
+if!! 
+(!! 
+status!! 
+==!! 
+$str!! #
+)!!# $
+{"" 
+mailMessage## 
+.## 
+Body##  
+=##! "
+$str### 1
++##2 3
+user##4 8
+.##8 9
+Username##9 A
++##B C
+$str##D L
++##M N
+$str$$ >
++$$? @
+$str	%% Å
++
+%%Ç É
+$str&& 9
+;&&9 :
+}'' 
+if)) 
+()) 
+status)) 
+==)) 
+$str))  
+)))  !
+{** 
+mailMessage++ 
+.++ 
+Body++  
+=++! "
+$str++# 1
++++2 3
+user++4 8
+.++8 9
+Username++9 A
++++B C
+$str++D L
++++M N
+$str,, T
++,,U V
+$str-- P
++--Q R
+$str.. 9
+;..9 :
+}// 
+if11 
+(11 
+status11 
+==11 
+$str11 %
+)11% &
+{22 
+mailMessage33 
+.33 
+Body33  
+=33! "
+$str33# 1
++332 3
+user334 8
+.338 9
+Username339 A
++33B C
+$str33D L
++33M N
+$str	44 Ñ
++
+44Ö Ü
+$str55 ;
++55< =
+$str66 9
+;669 :
+}77 
+mailMessage99 
+.99 
 
-IsBodyHtml!! 
-=!! 
-true!! !
-,!!! "
-}"" 
-;"" 
-mailMessage## 
-.## 
-To## 
-.## 
-Add## 
-(## 
-user## #
-.### $
-Email##$ )
-)##) *
-;##* +
+IsBodyHtml99 "
+=99# $
+true99% )
+;99) *
+mailMessage:: 
+.:: 
+To:: 
+.:: 
+Add:: 
+(:: 
+user:: #
+.::# $
+Email::$ )
+)::) *
+;::* +
 
-smtpClient%% 
-.%% 
-Send%% 
-(%% 
-mailMessage%% '
-)%%' (
-;%%( )
-}&& 	
-public(( 
-void(( %
-SendEmailStatusAndMessage(( -
-(((- .
-string((. 4
-status((5 ;
-,((; <
-User((= A
-user((B F
-,((F G
-string((H N
-message((O V
-)((V W
-{)) 	
-var** 
-mailMessage** 
-=** 
-new** !
-MailMessage**" -
-{++ 
-From,, 
-=,, 
-new,, 
-MailAddress,, &
-(,,& '
-config,,' -
-[,,- .
-$str,,. =
-],,= >
-),,> ?
-,,,? @
-Subject-- 
-=-- 
-$str-- )
-,--) *
-Body.. 
-=.. 
-$str.. %
-+..& '
-user..( ,
-..., -
-Username..- 5
-+..6 7
-$str..8 @
-+..A B
-$str// /
-+//0 1
-status//2 8
-+//9 :
-$str//; A
-+//A B
-$str00 
-+00 
-message00 
-+00  !
-$str00" (
-,00( )
+smtpClient<< 
+.<< 
+Send<< 
+(<< 
+mailMessage<< '
+)<<' (
+;<<( )
+}== 	
+public?? 
+void?? %
+SendEmailStatusAndMessage?? -
+(??- .
+string??. 4
+status??5 ;
+,??; <
+User??< @
+user??A E
+,??E F
+string??G M
+message??N U
+)??U V
+{@@ 	
+varAA 
+mailMessageAA 
+=AA 
+newAA !
+MailMessageAA" -
+{BB 
+FromCC 
+=CC 
+newCC 
+MailAddressCC &
+(CC& '
+configCC' -
+[CC- .
+$strCC. =
+]CC= >
+)CC> ?
+,CC? @
+SubjectDD 
+=DD 
+$strDD )
+,DD) *
+BodyEE 
+=EE 
+$strEE %
++EE& '
+userEE( ,
+.EE, -
+UsernameEE- 5
++EE6 7
+$strEE8 @
++EEA B
+$strFF C
++FFD E
+$strGG 7
++GG8 9
+messageGG: A
++GGB C
+$strHH C
++HHC D
+$strII 9
+}JJ 
+;JJ 
+mailMessageKK 
+.KK 
 
-IsBodyHtml11 
-=11 
-true11 !
-,11! "
-}22 
-;22 
-mailMessage33 
-.33 
-To33 
-.33 
-Add33 
-(33 
-user33 #
-.33# $
-Email33$ )
-)33) *
-;33* +
+IsBodyHtmlKK "
+=KK# $
+trueKK% )
+;KK) *
+mailMessageLL 
+.LL 
+ToLL 
+.LL 
+AddLL 
+(LL 
+userLL #
+.LL# $
+EmailLL$ )
+)LL) *
+;LL* +
 
-smtpClient55 
-.55 
-Send55 
-(55 
-mailMessage55 '
-)55' (
-;55( )
-}66 	
-}88 
-}99 ¯
+smtpClientNN 
+.NN 
+SendNN 
+(NN 
+mailMessageNN '
+)NN' (
+;NN( )
+}OO 	
+}QQ 
+}RR ¯
 PC:\Fac\SysopSquadTickets\Tickets\Application\Interfaces\IApplicationDbContext.cs
 	namespace 	
 Application
@@ -2952,5 +3189,5 @@ Interfaces  
 Ticket5 ;
 >; <
 {= >
-} 
-} 
+}? @
+} 

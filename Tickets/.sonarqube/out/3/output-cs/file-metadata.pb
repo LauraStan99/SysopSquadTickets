@@ -1,8 +1,7 @@
 U
-LC:\Fac\SysopSquadTickets\Tickets\Persistence\Context\ApplicationDbContext.csutf-8W
-NC:\Fac\SysopSquadTickets\Tickets\Persistence\Context\TicketDatabaseSettings.csutf-8L
-CC:\Fac\SysopSquadTickets\Tickets\Persistence\DependencyInjection.csutf-8Q
-HC:\Fac\SysopSquadTickets\Tickets\Persistence\Repository\v1\Repository.csutf-8W
-NC:\Fac\SysopSquadTickets\Tickets\Persistence\Repository\v1\TicketRepository.csutf-8w
-lC:\Fac\SysopSquadTickets\Tickets\Persistence\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.csutf-8d
-YC:\Fac\SysopSquadTickets\Tickets\Persistence\obj\Debug\net5.0\Persistence.AssemblyInfo.csutf-8
+LC:\Fac\SysopSquadTickets\Tickets\Tests.Helpers\CreateTicketCommandFactory.csutf-8H
+?C:\Fac\SysopSquadTickets\Tickets\Tests.Helpers\TicketFactory.csutf-8U
+LC:\Fac\SysopSquadTickets\Tickets\Tests.Helpers\UpdateTicketCommandFactory.csutf-8y
+nC:\Users\a\.nuget\packages\microsoft.net.test.sdk\16.8.3\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.Program.csutf-8y
+nC:\Fac\SysopSquadTickets\Tickets\Tests.Helpers\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.csutf-8h
+]C:\Fac\SysopSquadTickets\Tickets\Tests.Helpers\obj\Debug\net5.0\Tests.Helpers.AssemblyInfo.csutf-8

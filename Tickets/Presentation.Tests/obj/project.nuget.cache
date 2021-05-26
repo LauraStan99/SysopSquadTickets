@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "xQFB4JMTESIsEH7NHOAAqIxmIHrgS3akAw4AOTADJ2kqgB8w6g+REPtXI+ZTIT+CCzcCEcGKuABOKcppAqe3nQ==",
+  "dgSpecHash": "ISpHEgWGNtyfZksqU50DTGqxCUgBWLke4Kfu/hvhKhGcqtLOp/+YhdQdrxpL5AH5UhACNl/taPoRnvow+ofOOw==",
   "success": true,
   "projectFilePath": "C:\\Fac\\SysopSquadTickets\\Tickets\\Presentation.Tests\\Presentation.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\a\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
+    "C:\\Users\\a\\.nuget\\packages\\coverlet.msbuild\\3.0.3\\coverlet.msbuild.3.0.3.nupkg.sha512",
     "C:\\Users\\a\\.nuget\\packages\\microsoft.codecoverage\\16.8.3\\microsoft.codecoverage.16.8.3.nupkg.sha512",
     "C:\\Users\\a\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\a\\.nuget\\packages\\microsoft.net.test.sdk\\16.8.3\\microsoft.net.test.sdk.16.8.3.nupkg.sha512",
