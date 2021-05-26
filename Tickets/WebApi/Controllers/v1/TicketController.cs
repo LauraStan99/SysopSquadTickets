@@ -24,6 +24,7 @@ namespace WebApi.Controllers.v1
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [AllowAnonymous]
         public async Task<IActionResult> GetAll()
         {
             return Ok(await Mediator.Send(new GetAllTicketsQuery()));
@@ -45,6 +46,7 @@ namespace WebApi.Controllers.v1
 
         [HttpGet("userId/{id:length(24)}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [AllowAnonymous]
         public async Task<IActionResult> GetAllByUserId(string id)
         {
             try
@@ -59,6 +61,7 @@ namespace WebApi.Controllers.v1
 
         [HttpGet("consultantId/{id:length(24)}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [AllowAnonymous]
         public async Task<IActionResult> GetAllByConsultantId(string id)
         {
             try
@@ -73,6 +76,7 @@ namespace WebApi.Controllers.v1
 
         [HttpGet("status/{status}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [AllowAnonymous]
         public async Task<IActionResult> GetAllTicketsByStatus(string status)
         {
             try
@@ -87,6 +91,7 @@ namespace WebApi.Controllers.v1
 
         [HttpGet("ticket")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [AllowAnonymous]
         public async Task<IActionResult> GetTicketByUserIdAndConsultantId(GetTicketByUserIdAndConsultantIdQuery query)
         {
             try
@@ -102,6 +107,7 @@ namespace WebApi.Controllers.v1
         [HttpPost("create")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [AllowAnonymous]
         public async Task<IActionResult> Create([FromBody] CreateTicketCommand command)
         {
             var ticket = await Mediator.Send(command);
@@ -115,6 +121,7 @@ namespace WebApi.Controllers.v1
         [HttpPatch("update/{id:length(24)}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [AllowAnonymous]
         public async Task<IActionResult> Update(UpdateTicketByIdCommand command)
         {
             var ticket = await Mediator.Send(command);
@@ -128,6 +135,7 @@ namespace WebApi.Controllers.v1
         [HttpPatch("update/status")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [AllowAnonymous]
         public async Task<IActionResult> UpdateStatus(UpdateStatusTicketByIdCommand command)
         {
             var ticket = await Mediator.Send(command);
