@@ -33,7 +33,7 @@ namespace WebApi
 
             services.AddCors((options) =>
             {
-                options.AddPolicy("MyPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+                options.AddPolicy("MyPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
 
             services.AddMvc(option => option.EnableEndpointRouting = false);
