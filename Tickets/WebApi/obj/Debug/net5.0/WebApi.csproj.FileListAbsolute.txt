@@ -179,4 +179,4 @@ D:\TSP.NET\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\WebApi.dll
 D:\TSP.NET\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\ref\WebApi.dll
 D:\TSP.NET\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\WebApi.pdb
 D:\TSP.NET\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\WebApi.genruntimeconfig.cache
-C:\Fac\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\WebApi.csproj.AssemblyReference.cache
+C:\Fac\SysopSquadTickets\Tickets\WebApi\obj\Debug\net5.0\WebApi.csprojAssemblyReference.cache
