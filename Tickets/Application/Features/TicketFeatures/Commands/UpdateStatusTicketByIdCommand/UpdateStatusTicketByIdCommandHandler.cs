@@ -29,7 +29,7 @@ namespace Application.Features.TicketFeatures.Commands.UpdateStatusTicketByIdCom
             if (updatedTicket == null)
                 return null;
 
-            HttpRequestAccountsApi _request = new HttpRequestAccountsApi(request.UserToken);
+            HttpRequestAccountsApi _request = new HttpRequestAccountsApi();
             var user = _request.GetUserById(updatedTicket.UserId);
             SendEmail _sendEmail = new SendEmail();
             var consultant = _request.GetConsultantById(updatedTicket.ConsultantId);

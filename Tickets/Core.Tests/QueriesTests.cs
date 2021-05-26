@@ -31,28 +31,5 @@ namespace Core.Tests
             result.Should().HaveCount(tickets.Count);
             result.Should().Contain(ticket1);
         }
-
-        [Fact]
-        public async Task GivenAnId_WhenGetTicketByIdQueryHandler_ThenReturnNotNull()
-        {
-            var ticket = TicketsFactory.ValidTicket();
-            var command = new GetTicketByIdQuery(ticket.Id);
-            var mockRepo = new Mock<ITicketRepository>();
-            mockRepo.Setup(db => db.GetByIdAsync(command.Id).Result).Returns(ticket);
-            var handler = new GetTicketByIdQueryHandler(mockRepo.Object);
-
-            var result = await handler.Handle(command, CancellationToken.None);
-
-            result.Should().NotBeNull();
-            result.Id.Should().Be(ticket.Id);
-            result.UserId.Should().Be(ticket.UserId);
-            result.ConsultantId.Should().Be(ticket.ConsultantId);
-            result.Title.Should().Be(ticket.Title);
-            result.Description.Should().Be(ticket.Description);
-            result.Category.Should().Be(ticket.Category);
-            result.Status.Should().Be(ticket.Status);
-            result.Priority.Should().Be(ticket.Priority);
-            result.Date.Should().Be(ticket.Date);
-        }
     }
 }

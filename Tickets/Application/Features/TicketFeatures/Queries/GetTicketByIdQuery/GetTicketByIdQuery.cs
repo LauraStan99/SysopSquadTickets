@@ -10,7 +10,6 @@ namespace Application.Features.TicketFeatures.Queries.GetTicketByIdQuery
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public readonly string Id;
-        public string UserToken { get; set; }
 
         public GetTicketByIdQuery(string id)
         {

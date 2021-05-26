@@ -21,6 +21,5 @@ namespace Application.Features.TicketFeatures.Commands.CreateTicketCommand
         [Required]
         public string Priority { get; set; }
         public DateTime Date { get; set; } = DateTime.Now;
-        public string UserToken { get; set; }
     }
 }

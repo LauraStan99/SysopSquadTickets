@@ -13,17 +13,14 @@ namespace Application.Helpers
     public class HttpRequestAccountsApi
     {
         private readonly HttpClient client;
-        public HttpRequestAccountsApi(string token)
+        public HttpRequestAccountsApi()
         {
             client = new HttpClient()
             {
                 BaseAddress = new Uri(AppSettings.BaseAddress),
             };
             client.DefaultRequestHeaders.Add("User-Agent", "Anything");
-            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-
         }
  
         public User GetUserById(string userId)
