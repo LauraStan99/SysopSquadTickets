@@ -299,3 +299,8 @@ D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\ref\I
 D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infrastructure.Tests.pdb
 D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infrastructure.Tests.genruntimeconfig.cache
 C:\Fac\SysopSquadTickets\Tickets\Infrastructure.Tests\obj\Debug\net5.0\Infrastructure.Tests.csproj.AssemblyReference.cache
+D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\bin\Debug\net5.0\Tests.Helpers.deps.json
+D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\bin\Debug\net5.0\Tests.Helpers.runtimeconfig.json
+D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\bin\Debug\net5.0\Tests.Helpers.runtimeconfig.dev.json
+D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\bin\Debug\net5.0\Tests.Helpers.dll
+D:\TSP.NET\SysopSquadTickets\Tickets\Infrastructure.Tests\bin\Debug\net5.0\Tests.Helpers.pdb

@@ -293,3 +293,4 @@ D:\TSP.NET\SysopSquadTickets\Tickets\Core.Tests\obj\Debug\net5.0\Core.Tests.pdb
 D:\TSP.NET\SysopSquadTickets\Tickets\Core.Tests\obj\Debug\net5.0\Core.Tests.genruntimeconfig.cache
 C:\Fac\SysopSquadTickets\Tickets\Core.Tests\bin\Debug\net5.0\CoverletSourceRootsMapping
 C:\Fac\SysopSquadTickets\Tickets\Core.Tests\obj\Debug\net5.0\Core.Tests.csproj.AssemblyReference.cache
+D:\TSP.NET\SysopSquadTickets\Tickets\Core.Tests\bin\Debug\net5.0\CoverletSourceRootsMapping

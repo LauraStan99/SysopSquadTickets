@@ -31,5 +31,7 @@ namespace Core.Tests
             result.Should().HaveCount(tickets.Count);
             result.Should().Contain(ticket1);
         }
+
+       
     }
 }
