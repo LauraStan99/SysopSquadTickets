@@ -191,8 +191,8 @@
               "C:\\Fac\\SysopSquadTickets\\Tickets\\Persistence\\Persistence.csproj": {
                 "projectPath": "C:\\Fac\\SysopSquadTickets\\Tickets\\Persistence\\Persistence.csproj"
               },
-              "C:\\Fac\\SysopSquadTickets\\Tickets\\WebAPI\\WebAPI.csproj": {
-                "projectPath": "C:\\Fac\\SysopSquadTickets\\Tickets\\WebAPI\\WebAPI.csproj"
+              "C:\\Fac\\SysopSquadTickets\\Tickets\\WebApi\\WebApi.csproj": {
+                "projectPath": "C:\\Fac\\SysopSquadTickets\\Tickets\\WebApi\\WebApi.csproj"
               }
             }
           }

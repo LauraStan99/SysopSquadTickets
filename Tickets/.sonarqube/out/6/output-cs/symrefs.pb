@@ -5,59 +5,60 @@ HC:\Fac\SysopSquadTickets\Tickets\WebApi\Controllers\BaseApiController.cs
  $ 
 
   
-+ 3 $ú
++ 3 $û
 JC:\Fac\SysopSquadTickets\Tickets\WebApi\Controllers\v1\TicketController.cs
 
- !
+ !
 
- 
-* 2; C
+ 
+* 2; C
 
-) /
+) /
 
-!!) 0
-!!8 :%%E G
-'' ))0 2
+$$) 0
+$$8 :''E G
+)) ++0 2
 
-//) 7
-//? A33M O
-55 770 2
+22) 7
+22? A66M O
+88 ::0 2
 
-==) =
-==E GAAS U
-CC EE0 2
+AA) =
+AAE GEES U
+GG II0 2
 
-KK) >
-KKF LOOM S
-QQ SS0 2
+PP) >
+PPF LTTM S
+VV XX0 2
 
-YY) I
-YYp u]]. 3
-__ aa0 2
+__) I
+__p ucc. 3
+ee gg0 2
 
-hh) /
-hhO Vjj- 4
-jj kk mm 
+oo) /
+ooO Vqq- 4
+qq ss vv 
 
-ss) /
-ssH Ouu- 4
-uu ww 
+}}) /
+}}H O- 4
+ 
+ÅÅ 
 
-ÄÄ) 5
+ãã) 5
 
-ÄÄT [
-ÇÇ- 4
+ããT [
+çç- 4
 
-ÇÇ 
-ÑÑ 
+çç 
+èè 
 
-çç) /
+òò) /
 
-çç7 9
-èèJ L
+òò7 9
+ööJ L
 
-èè 
-êê §
+öö 
+úú §
 2C:\Fac\SysopSquadTickets\Tickets\WebApi\Program.cs
 
  
@@ -95,7 +96,7 @@ JC:\Fac\SysopSquadTickets\Tickets\WebApi\Controllers\v1\TicketController.cs
 RC:\Fac\SysopSquadTickets\Tickets\WebApi\Validators\CreateTicketCommandValidator.cs
 
  -
- ((' /
+ ))' /
 
 
 
@@ -108,7 +109,7 @@ RC:\Fac\SysopSquadTickets\Tickets\WebApi\Validators\CreateTicketCommandValidator
 
 
   "
- --' /
+ ..' /
 
  
 
@@ -116,13 +117,13 @@ RC:\Fac\SysopSquadTickets\Tickets\WebApi\Validators\CreateTicketCommandValidator
 
  
 
- +
-    
-  $
-  $
-      $
-%% %% $
-** ** $ 
+ +
+    
+  $
+  $
+!! !! $
+&& && $
+++ ++ $ 
 dC:\Fac\SysopSquadTickets\Tickets\WebApi\Validators\GetTicketByUserIdAndConsultantIdQueryValidator.cs
 
  ?
@@ -132,11 +133,11 @@ dC:\Fac\SysopSquadTickets\Tickets\WebApi\Validators\GetTicketByUserIdAndConsulta
 
       
   $
-  $Ú
+  $Ê
 \C:\Fac\SysopSquadTickets\Tickets\WebApi\Validators\UpdateStatusTicketByIdCommandValidator.cs
 
  7
- ' -
+ ' -
 
 
 
@@ -144,11 +145,7 @@ dC:\Fac\SysopSquadTickets\Tickets\WebApi\Validators\GetTicketByUserIdAndConsulta
 
 
 
- 
-
-
-
- "
+ 
 
  5
     

@@ -197,4 +197,4 @@ D:\TSP.NET\SysopSquadTickets\Tickets\Presentation.Tests\obj\Debug\net5.0\Present
 D:\TSP.NET\SysopSquadTickets\Tickets\Presentation.Tests\obj\Debug\net5.0\ref\Presentation.Tests.dll
 D:\TSP.NET\SysopSquadTickets\Tickets\Presentation.Tests\obj\Debug\net5.0\Presentation.Tests.pdb
 D:\TSP.NET\SysopSquadTickets\Tickets\Presentation.Tests\obj\Debug\net5.0\Presentation.Tests.genruntimeconfig.cache
-C:\Fac\SysopSquadTickets\Tickets\Presentation.Tests\obj\Debug\net5.0\Presentation.Tests.csprojAssemblyReference.cache
+C:\Fac\SysopSquadTickets\Tickets\Presentation.Tests\obj\Debug\net5.0\Presentation.Tests.csproj.AssemblyReference.cache

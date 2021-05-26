@@ -261,4 +261,4 @@ D:\TSP.NET\SysopSquadTickets\Tickets\Tests.Helpers\obj\Debug\net5.0\Tests.Helper
 D:\TSP.NET\SysopSquadTickets\Tickets\Tests.Helpers\obj\Debug\net5.0\ref\Tests.Helpers.dll
 D:\TSP.NET\SysopSquadTickets\Tickets\Tests.Helpers\obj\Debug\net5.0\Tests.Helpers.pdb
 D:\TSP.NET\SysopSquadTickets\Tickets\Tests.Helpers\obj\Debug\net5.0\Tests.Helpers.genruntimeconfig.cache
-C:\Fac\SysopSquadTickets\Tickets\Tests.Helpers\obj\Debug\net5.0\Tests.Helpers.csprojAssemblyReference.cache
+C:\Fac\SysopSquadTickets\Tickets\Tests.Helpers\obj\Debug\net5.0\Tests.Helpers.csproj.AssemblyReference.cache
